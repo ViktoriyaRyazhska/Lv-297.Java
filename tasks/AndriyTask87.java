@@ -62,13 +62,13 @@ public class AndriyTask87 extends AbstractTest {
     }
                        
     
-    private int getTheSumOfLastElements() {      
-                                          
+    private int getTheSumOfLastElements() {   
+
         // put input (entered number) into String array, each cell in which it is a character of the number
-        String a[] = number.split("");         
-                                                                       
+        String numbersArray[] = number.split("");          
+           
         // convert all characters from input to Integer and map them into an array, then get the amount depending on the condition - (getN())
-        return Arrays.stream(a).mapToInt(Integer::parseInt).skip(a.length - Integer.parseInt(getN())).sum();                                 
+        return Arrays.stream(numbersArray).mapToInt(Integer::parseInt).skip(numbersArray.length - Integer.parseInt(getN())).sum();                                 
         
     }
 
