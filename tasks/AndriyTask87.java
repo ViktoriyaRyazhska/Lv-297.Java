@@ -67,7 +67,7 @@ public class AndriyTask87 extends AbstractTest {
         // put input (entered number) into String array, each cell in which it is a character of the number
         String numbersArray[] = number.split("");          
            
-        // convert all characters from input to Integer and map them into an array, then get the amount depending on the condition - (getN())
+        // convertation all characters from String array to Integer array and returning the amount depending on the condition - (getN())
         return Arrays.stream(numbersArray).mapToInt(Integer::parseInt).skip(numbersArray.length - Integer.parseInt(getN())).sum();                                 
         
     }
