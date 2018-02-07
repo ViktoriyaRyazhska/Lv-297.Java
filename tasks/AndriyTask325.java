@@ -18,17 +18,28 @@ public class AndriyTask325 extends AbstractTest {
         super("325");
     }
 
-    private static void getPrimeFactor() {
+    private static boolean isValueNumberAndNotEmpty(String value) {
+        return value.chars().allMatch(Character::isDigit) && !value.equals("");
+    }
+
+    private static void getAllNumbersDivisors() {
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 
-            System.out.println("Enter any Number to find Prime Factors ");
-            int number = Integer.parseInt(br.readLine());
-            System.out.print("Prime Factors are : ");
+            System.out.println("Enter any Number to find all simple divisors");
+            String inputValue = br.readLine();
+
+            while (!isValueNumberAndNotEmpty(inputValue)) {
+                System.out.println("Please, enter a digit value\nTry again");
+                inputValue = br.readLine();
+            }
+
+            int number = Integer.parseInt(inputValue);
+            System.out.printf("This is all simple divisors of the number %s : ", number);
 
             for (int i = 2; i <= number; i++) {
                 while (number % i == 0) {
-                    System.out.print(i + " ");
+                    System.out.print("\n" + i);
                     number = number / i;
                 }
             }
@@ -40,8 +51,10 @@ public class AndriyTask325 extends AbstractTest {
         }
     }
 
+    
     @Override
     public void execute() {
         getPrimeFactor();
     }
+    
 }
