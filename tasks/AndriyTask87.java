@@ -1,8 +1,10 @@
 package com.lv297java.hometask1.tasks;
 
 /**
- * Created by Andriy on 06.02.18.
  * This program return the amount m from the last digits of the number n.
+ *
+ * @version        1.0  06.02.18
+ * @author         Andriy Shemechko 
  */
 
 import java.io.BufferedReader;
