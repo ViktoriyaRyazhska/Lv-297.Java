@@ -1,5 +1,7 @@
 package com.lv297java.tasks;
 
+import com.lv297java.AbstractTest;
+
 import java.util.*;
 
 public class TaskNazariy324 extends AbstractTest {

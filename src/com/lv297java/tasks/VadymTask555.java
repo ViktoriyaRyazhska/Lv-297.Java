@@ -1,8 +1,10 @@
 package com.lv297java.tasks;
 
+import com.lv297java.AbstractTest;
+
 import java.util.Scanner;
 
-public class VadymTask555 extends AbstractTest{
+public class VadymTask555 extends AbstractTest {
 
 	public VadymTask555() {
 		super("555");
