@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 /**
  * This class implement task 107.
- * @version 1.0
+ *
  * @author Nazariy Demyanovskyi
+ * @version 1.0
  */
 public class TaskNazariy107 extends AbstractTest {
 
@@ -42,6 +43,7 @@ public class TaskNazariy107 extends AbstractTest {
 
     /**
      * Reads one integer value from standart input.
+     *
      * @return integer value from standart input
      */
     private static Integer readMFromInput() {
