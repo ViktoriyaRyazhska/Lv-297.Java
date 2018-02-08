@@ -5,21 +5,35 @@ import com.lv297java.AbstractTest;
 import java.util.stream.IntStream;
 
 /**
- * This program return all Armstrong numbers consisting of two, three and four digits if there exists.
+ * With this class you can print all Armstrong numbers consisting of two, three and four digits if there exists.
  *
- * @version        1.0  06.02.18
- * @author         Andriy Shemechko 
+ * @author Andriy Shemechko
+ * @version 1.0
+ * @since 2017-06-02
  */
 
 public class AndriyTask562 extends AbstractTest {
 
+    /**
+     * Initializes a newly created {@code AndriyTask562} object.
+     * It represents an Task 562.
+     */
     public AndriyTask562() {
         super("562");
     }
 
-     public static void getArmstrongNumbers() {
+    /**
+     * Print all Armstrong numbers consisting of condition
+     *
+     * @param lowerLimit is the number that represents the lower limit of Armstrong numbers
+     * @param maxLimit   is the number that represents the upper limit of Armstrong numbers
+     */
+    private void printArmstrongNumbers() {
 
-        IntStream.range(10, 100000)   // here we set the range
+        int lowerLimit = 10;
+        int maxLimit = 10000;
+
+        IntStream.range(lowerLimit, maxLimit)
                 .filter((n) -> {
                     final String number = Integer.toString(n);
                     return number.chars()
@@ -30,10 +44,12 @@ public class AndriyTask562 extends AbstractTest {
 
     }
 
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void execute() {
-        getArmstrongNumbers();
+        printArmstrongNumbers();
     }
 
 
