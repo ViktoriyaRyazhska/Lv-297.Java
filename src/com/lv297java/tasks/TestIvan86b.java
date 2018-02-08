@@ -1,13 +1,20 @@
 package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
-
 import java.util.Scanner;
 
 /**
- * Created by ivan on 06.02.18.
+ * Class for task 86b.
+ * determines the sum of digits in the number
+ *
+ * @author Ivan Bernevek
+ * @version 1.0 8 Feb 2018
  */
 public class TestIvan86b extends AbstractTest {
+    /**
+     * Initializes a newly created {@link TestIvan86b} object.
+     * It represents a Task 86b.
+     */
     public TestIvan86b() {
         super("TestIvan86b");
     }
@@ -16,16 +23,17 @@ public class TestIvan86b extends AbstractTest {
     public void execute() {
         System.out.println("enter your number");
         Scanner scanner = new Scanner(System.in);
+        final int step = 10;
         int sum = 0;
-        int var = scanner.nextInt();
-        int var2 = var;
-        if (var>0){
-            while(var > 0){
-                sum += var%10;
-                var/=10;
+        int beginnerVariable = scanner.nextInt();
+        int variable = beginnerVariable;
+        if (variable > 0) {
+            while (variable > 0) {
+                sum += variable % step;
+                variable /= step;
             }
-            System.out.println("the sum of digits number's "+var2+" are " +sum);
-        }else {
+            System.out.println("the sum of digits number's " + beginnerVariable + " are " + sum);
+        } else {
             System.out.println("the number is not natural");
         }
         System.out.println("*******************************************");
