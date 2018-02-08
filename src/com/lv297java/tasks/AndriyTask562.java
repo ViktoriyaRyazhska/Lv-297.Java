@@ -1,7 +1,6 @@
 package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
-
 import java.util.stream.IntStream;
 
 /**
@@ -23,7 +22,7 @@ public class AndriyTask562 extends AbstractTest {
     }
 
     /**
-     * Print all Armstrong numbers consisting of condition
+     * this method print all Armstrong numbers consisting of condition
      *
      * @param lowerLimit is the number that represents the lower limit of Armstrong numbers
      * @param maxLimit   is the number that represents the upper limit of Armstrong numbers

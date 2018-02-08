@@ -1,7 +1,6 @@
 package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -37,7 +36,7 @@ public class AndriyTask325 extends AbstractTest {
     }
 
     /**
-     * This method reads the number that we want to divide
+     * this method reads the number that we want to divide
      */
     private void readNumber() {
 
@@ -61,7 +60,7 @@ public class AndriyTask325 extends AbstractTest {
     }
 
     /**
-     * This method print all numbers divisors
+     * this method print all numbers divisors
      */
     private void printAllNumbersDivisors() {
 

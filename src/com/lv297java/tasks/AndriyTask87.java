@@ -1,7 +1,6 @@
 package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -18,12 +17,12 @@ import java.util.Arrays;
 public class AndriyTask87 extends AbstractTest {
 
     /**
-     * from the digits of this number we calculate the sum
+     * from the digits of this variable we calculate the sum
      */
     private String inputNumber;
 
     /**
-     * this number determines how much we want to take the digits from the end of number to get the sum from them
+     * this variable determines how much we want to take the digits from the end of number to get the sum from them
      */
     private String numberOfLastDigits;
 
@@ -54,7 +53,7 @@ public class AndriyTask87 extends AbstractTest {
     }
 
     /**
-     * This method reads a inputNumber and numberOfLastDigits
+     * this method reads a inputNumber and numberOfLastDigits
      */
     private void readData() {
 
@@ -87,7 +86,7 @@ public class AndriyTask87 extends AbstractTest {
     }
 
     /**
-     * This method return the sum from the last digits of the number ,
+     * this method return the sum from the last digits of the number ,
      *
      * @param numbersArray[] it's the array where we put each digits from inputNumber to calculate the sum
      */
