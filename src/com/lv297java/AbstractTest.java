@@ -18,7 +18,7 @@ public abstract class AbstractTest {
      * certain math test.
      * @param testID unique ID of test
      */
-    public AbstractTest(final String testID){
+    public AbstractTest(final String testID) {
         this.testID = testID;
     }
 
