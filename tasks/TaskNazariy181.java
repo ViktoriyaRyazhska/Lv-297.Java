@@ -1,4 +1,4 @@
-package com.lv297java.hometask1.tasks;
+package tasks;
 
 import java.util.*;
 import java.util.stream.Collectors;
