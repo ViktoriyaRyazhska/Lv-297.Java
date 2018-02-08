@@ -1,8 +1,10 @@
 package com.lv297java.tasks;
 
+import com.lv297java.AbstractTest;
+
 import java.util.Scanner;
 
-public class TestYura559 extends AbstractTest{
+public class TestYura559 extends AbstractTest {
 	
 	private Scanner sc;
 	

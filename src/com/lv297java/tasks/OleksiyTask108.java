@@ -1,6 +1,7 @@
 package com.lv297java.tasks;
 
-import com.lv297java.tasks.AbstractTest;
+import com.lv297java.AbstractTest;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
