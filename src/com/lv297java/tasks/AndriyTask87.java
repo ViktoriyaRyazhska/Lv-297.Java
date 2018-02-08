@@ -7,6 +7,8 @@ package com.lv297java.tasks;
  * @author         Andriy Shemechko 
  */
 
+import com.lv297java.AbstractTest;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

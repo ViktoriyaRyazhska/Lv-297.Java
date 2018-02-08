@@ -1,5 +1,7 @@
 package com.lv297java.tasks;
 
+import com.lv297java.AbstractTest;
+
 import java.util.Scanner;
 /**
  * Class that extends abstract class AbstractTest and
@@ -49,7 +51,6 @@ public class TestYura323 extends AbstractTest {
             divided = divider;
             divider = tmp;
         }
-        return a;
+		return divider;
     }
-    // second commit
 }

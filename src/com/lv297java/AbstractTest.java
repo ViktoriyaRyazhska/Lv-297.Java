@@ -1,4 +1,4 @@
-package com.lv297java.tasks;
+package com.lv297java;
 
 /**
  * Base class for all tests.
