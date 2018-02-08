@@ -2,28 +2,51 @@ package com.lv297java.tasks;
 
 import java.util.Scanner;
 
+/**
+ * This class implement task 107.
+ * @version 1.0
+ * @author Nazariy Demyanovskyi
+ */
 public class TaskNazariy107 extends AbstractTest {
 
+    /**
+     * This number defined in task.
+     */
+    public static final int FOUR = 4;
+
+    /**
+     * Initializes a newly created {@code TaskNazariy107} object.
+     * It represents an Task 107.
+     */
     public TaskNazariy107() {
         super("N-107");
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void execute() {
         Integer m = readMFromInput();
-        if(m == null) return;
+        if (m == null) {
+            return;
+        }
 
-        for(int k = 1; ; k++) {
-            if (Math.pow(4, k) >= m) {
+        for (int k = 1; ; k++) {
+            if (Math.pow(FOUR, k) >= m) {
                 System.out.println("k = " + (k - 1));
                 break;
             }
         }
     }
 
+    /**
+     * Reads one integer value from standart input.
+     * @return integer value from standart input
+     */
     private static Integer readMFromInput() {
         Scanner scanner = new Scanner(System.in);
-        while(true) {
+        while (true) {
             System.out.print("Enter m: ");
             if (!scanner.hasNextInt()) {
                 if (scanner.hasNext("(?i)\\s*exit\\s*")) {
@@ -35,7 +58,7 @@ public class TaskNazariy107 extends AbstractTest {
                 }
             }
             int m = scanner.nextInt();
-            if(m <= 1) {
+            if (m <= 1) {
                 System.out.println("Number must be greater then 1. Try again or input 'exit' to exit.");
                 continue;
             }
