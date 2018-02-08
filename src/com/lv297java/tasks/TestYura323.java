@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class TestYura323 extends AbstractTest {
     /**
-     *
+     * Initializes a newly created {@code TestYura323} object.
      */
     public TestYura323() {
         super("323(3)");
@@ -51,6 +51,6 @@ public class TestYura323 extends AbstractTest {
             divided = divider;
             divider = tmp;
         }
-		return divider;
+        return divider;
     }
 }
