@@ -1,6 +1,4 @@
-package com.lv297java.hometask1.tasks;
-
-import com.lv297java.hometask1.AbstractTest;
+package com.lv297java.tasks;
 
 import java.io.BufferedReader;
 import java.io.IOException;

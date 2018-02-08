@@ -1,8 +1,6 @@
-package tasks;
+package com.lv297java.tasks;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class TaskNazariy181 extends AbstractTest {
 

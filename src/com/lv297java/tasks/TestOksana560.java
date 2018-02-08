@@ -1,8 +1,7 @@
-package tasks;
+package com.lv297java.tasks;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.ToIntFunction;
 
 public class TestOksana560 extends AbstractTest {
 

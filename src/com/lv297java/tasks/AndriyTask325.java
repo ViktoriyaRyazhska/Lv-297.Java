@@ -1,4 +1,4 @@
-package com.lv297java.hometask1.tasks;
+package com.lv297java.tasks;
 
 /**
  * This program displays all the simple divisors of the number

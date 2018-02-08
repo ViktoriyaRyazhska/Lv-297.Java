@@ -1,6 +1,6 @@
-package com.lv297java.hometask1.tasks;
+package com.lv297java.tasks;
 
-import com.lv297java.hometask1.AbstractTest;
+import com.lv297java.tasks.AbstractTest;
 
 import java.io.*;
 

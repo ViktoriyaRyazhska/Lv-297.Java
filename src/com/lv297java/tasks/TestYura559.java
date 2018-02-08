@@ -1,3 +1,5 @@
+package com.lv297java.tasks;
+
 import java.util.Scanner;
 
 public class TestYura559 extends AbstractTest{

@@ -1,4 +1,4 @@
-package tasks;
+package com.lv297java.tasks;
 
 public abstract class AbstractTest {
 

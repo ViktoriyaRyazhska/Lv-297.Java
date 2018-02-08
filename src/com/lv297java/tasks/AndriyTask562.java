@@ -1,4 +1,6 @@
-package com.lv297java.hometask1.tasks;
+package com.lv297java.tasks;
+
+import java.util.stream.IntStream;
 
 /**
  * This program return all Armstrong numbers consisting of two, three and four digits if there exists.
@@ -15,7 +17,7 @@ public class AndriyTask562 extends AbstractTest {
 
      public static void getArmstrongNumbers() {
 
-        IntStream.range(10, 100000)   // here we set the range 
+        IntStream.range(10, 100000)   // here we set the range
                 .filter((n) -> {
                     final String number = Integer.toString(n);
                     return number.chars()

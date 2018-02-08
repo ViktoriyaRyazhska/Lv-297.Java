@@ -1,4 +1,4 @@
-package com.lv297java.hometask1.tasks;
+package com.lv297java.tasks;
 
 import java.util.Scanner;
 

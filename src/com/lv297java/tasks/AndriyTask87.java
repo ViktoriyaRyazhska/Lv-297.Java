@@ -1,4 +1,4 @@
-package com.lv297java.hometask1.tasks;
+package com.lv297java.tasks;
 
 /**
  * This program return the amount m from the last digits of the number n.
