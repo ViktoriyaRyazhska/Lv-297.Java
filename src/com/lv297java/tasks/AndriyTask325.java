@@ -55,7 +55,7 @@ public class AndriyTask325 extends AbstractTest {
     
     @Override
     public void execute() {
-        //getPrimeFactor(); TODO
+        getAllNumbersDivisors();
     }
     
 }
