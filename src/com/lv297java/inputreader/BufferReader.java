@@ -1,4 +1,4 @@
-package com.lv297java.tasks.inputreader;
+package com.lv297java.inputreader;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,7 +1,7 @@
 package com.lv297java;
 
-import com.lv297java.tasks.inputreader.BufferReader;
-import com.lv297java.tasks.inputreader.Reader;
+import com.lv297java.inputreader.BufferReader;
+import com.lv297java.inputreader.Reader;
 
 import java.io.BufferedReader;
 import java.io.File;

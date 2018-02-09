@@ -2,10 +2,9 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 
-import static com.lv297java.tasks.inputreader.BufferReader.reader;
+import static com.lv297java.inputreader.BufferReader.reader;
 
 /**
  * With this class you can print all the simple divisors of the number.

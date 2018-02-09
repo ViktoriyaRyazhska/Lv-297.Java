@@ -2,11 +2,10 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Arrays;
 
-import static com.lv297java.tasks.inputreader.BufferReader.reader;
+import static com.lv297java.inputreader.BufferReader.reader;
 
 /**
  * With this class you can calculate the sum from the last digits of the number.
