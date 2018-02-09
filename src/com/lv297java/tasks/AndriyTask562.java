@@ -1,6 +1,7 @@
 package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
+
 import java.util.stream.IntStream;
 
 /**
@@ -22,15 +23,12 @@ public class AndriyTask562 extends AbstractTest {
     }
 
     /**
-     * this method print all Armstrong numbers consisting of condition
-     *
-     * @param lowerLimit is the number that represents the lower limit of Armstrong numbers
-     * @param maxLimit   is the number that represents the upper limit of Armstrong numbers
+     * This method print all Armstrong numbers consisting of condition.
      */
     private void printArmstrongNumbers() {
 
-        int lowerLimit = 10;
-        int maxLimit = 10000;
+        int lowerLimit = 10; // is the number that represents the lower limit of Armstrong numbers.
+        int maxLimit = 10000; // is the number that represents the upper limit of Armstrong numbers.
 
         IntStream.range(lowerLimit, maxLimit)
                 .filter((n) -> {

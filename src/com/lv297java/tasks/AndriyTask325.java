@@ -1,12 +1,13 @@
 package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * With this class you can print all the simple divisors of the number
+ * With this class you can print all the simple divisors of the number.
  *
  * @author Andriy Shemechko
  * @version 1.0
@@ -16,7 +17,7 @@ import java.io.InputStreamReader;
 public class AndriyTask325 extends AbstractTest {
 
     /**
-     * this is the number we want to divide
+     * This is the number we want to divide.
      */
     private int number;
 
@@ -29,14 +30,17 @@ public class AndriyTask325 extends AbstractTest {
     }
 
     /**
-     * checks whether the entered number and whether input is not empty
+     * Checks whether the entered number and whether input is not empty.
+     *
+     * @param value it's the input we wont to check
+     * @return tru or false depending on check results
      */
     private boolean isInputCorrect(String value) {
         return value.chars().allMatch(Character::isDigit) && !value.equals("");
     }
 
     /**
-     * this method reads the number that we want to divide
+     * This method reads the number that we want to divide.
      */
     private void readNumber() {
 
@@ -60,7 +64,7 @@ public class AndriyTask325 extends AbstractTest {
     }
 
     /**
-     * this method print all numbers divisors
+     * This method print all numbers divisors.
      */
     private void printAllNumbersDivisors() {
 
