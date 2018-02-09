@@ -26,3 +26,7 @@ META-INF/
 .idea/
 out/
 *.iml
+
+#Eclipse
+*.classpath
+*.project
