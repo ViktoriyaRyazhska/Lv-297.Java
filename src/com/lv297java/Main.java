@@ -38,13 +38,8 @@ public class Main {
      * @param args array of string arguments for startup
      *
      * @throws IOException can throw IOException
-     * @throws IllegalAccessException can throw IllegalAccessException
-     * @throws InstantiationException can throw InstantiationException
-     * @throws NoSuchMethodException can throw NoSuchMethodException
-     * @throws InvocationTargetException can throw InvocationTargetException
      */
-    public static void main(String[] args) throws IOException, IllegalAccessException,
-            InstantiationException, NoSuchMethodException, InvocationTargetException {
+    public static void main(String[] args) throws IOException {
         initializeList(searchClasses(PATH_TO_TASKS));
         start();
     }
@@ -105,20 +100,14 @@ public class Main {
      * Method that is responsible for initializing classes from paths read through searchClasses.
      *
      * @param list receives list of strings with relative paths to classes
-     *
-     * @throws IllegalAccessException can throw IllegalAccessException
-     * @throws InstantiationException can throw InstantiationException
-     * @throws NoSuchMethodException can throw NoSuchMethodException
-     * @throws InvocationTargetException can throw InvocationTargetException
      */
-    private static void initializeList(List<String> list) throws IllegalAccessException,
-            InstantiationException, NoSuchMethodException, InvocationTargetException {
+    private static void initializeList(List<String> list) {
 
         for (String item : list) {
             try {
                 Class<?> a = Class.forName(item);
                 tasksList.add((AbstractTest) a.getConstructor().newInstance());
-            } catch (ClassNotFoundException e) {
+            } catch (ReflectiveOperationException e) {
                 System.out.println("SYS-INFO: Can`t load class " + item);
             }
         }
