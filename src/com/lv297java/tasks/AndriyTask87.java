@@ -103,7 +103,7 @@ public class AndriyTask87 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute() {
+    public void execute(BufferedReader reader) {
         readData();
         System.out.println(getTheSumOfLastElements());
     }

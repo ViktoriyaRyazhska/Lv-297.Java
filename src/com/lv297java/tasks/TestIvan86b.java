@@ -1,6 +1,8 @@
 package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
+
+import java.io.BufferedReader;
 import java.util.Scanner;
 
 /**
@@ -20,7 +22,7 @@ public class TestIvan86b extends AbstractTest {
     }
 
     @Override
-    public void execute() {
+    public void execute(BufferedReader reader) {
         System.out.println("enter your number");
         Scanner scanner = new Scanner(System.in);
         final int step = 10;

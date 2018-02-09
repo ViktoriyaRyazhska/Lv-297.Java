@@ -28,8 +28,8 @@ public class TaskOstap243a extends AbstractTest {
     }
 
     @Override
-    public void execute() {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public void execute(BufferedReader reader) {
+        reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Given a natural number n. Can it be represented it in the form of the sum of two squares of positive integers ? If you can specify a pair of such numbers, where n = x^2 + y^2. Show one pair");
         System.out.println("Type (exit task) to end attempt");
         while (true) {

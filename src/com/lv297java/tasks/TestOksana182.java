@@ -2,6 +2,7 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -29,7 +30,7 @@ public class TestOksana182 extends AbstractTest {
      * of the sequence and the same sequence of numbers</p>
      */
     @Override
-    public void execute() {
+    public void execute(BufferedReader reader) {
         int n = readCountOfNumbers();
         List<Integer> numbers = readNumbers(n);
 

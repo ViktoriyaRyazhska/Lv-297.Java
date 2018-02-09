@@ -28,8 +28,8 @@ public class TaskOstap107 extends AbstractTest {
     }
 
     @Override
-    public void execute() {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public void execute(BufferedReader reader) {
+        reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Given an integer m > 1. Get the most out of the whole k, at which 4^k < m.");
         System.out.println("Type (exit task) to end attempt");
         while (true) {

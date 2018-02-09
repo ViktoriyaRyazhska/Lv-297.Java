@@ -2,6 +2,7 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
+import java.io.BufferedReader;
 import java.util.Scanner;
 
 public class VadymTask178g extends AbstractTest {
@@ -36,7 +37,7 @@ public class VadymTask178g extends AbstractTest {
 	}
 
 	@Override
-	public void execute() {
+	public void execute(BufferedReader reader) {
 		calculation(progresionFilling());
 	}
 

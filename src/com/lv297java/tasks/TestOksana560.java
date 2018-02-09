@@ -2,6 +2,7 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class TestOksana560 extends AbstractTest {
             }
         }
         TestOksana182 t = new TestOksana182();
-        t.execute();
+        //t.execute();
         return divisors;
     }
 
@@ -71,7 +72,7 @@ public class TestOksana560 extends AbstractTest {
      * <p>Current task does not expect the input.</p>
      */
     @Override
-    public void execute() {
+    public void execute(BufferedReader reader) {
         final int leftLimit = 200;
         final int rightLimit = 300;
         System.out.println("Result: ");
