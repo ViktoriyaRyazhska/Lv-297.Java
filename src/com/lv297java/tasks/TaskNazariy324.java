@@ -27,7 +27,7 @@ public class TaskNazariy324 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute(BufferedReader reader) {
+    public void execute() {
         Integer p = readNumberFromInput("p");
         if (p == null) {
             return;

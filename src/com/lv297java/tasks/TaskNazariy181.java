@@ -50,7 +50,7 @@ public class TaskNazariy181 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute(BufferedReader reader) {
+    public void execute() {
         List<Integer> numbers = readDataFromInput();
         executeSubTaskA(numbers);
         executeSubTaskB(numbers);

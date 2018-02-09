@@ -37,5 +37,5 @@ public abstract class AbstractTest {
      * It accepts data from the standard input (if necessary)
      * and outputs the result to a standard output.
      */
-    public abstract void execute(BufferedReader reader);
+    public abstract void execute();
 }

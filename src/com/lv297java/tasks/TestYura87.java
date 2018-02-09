@@ -23,7 +23,7 @@ public class TestYura87 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute(BufferedReader reader) {
+    public void execute() {
         int n;
         int m;
         int lastDigitsSum;

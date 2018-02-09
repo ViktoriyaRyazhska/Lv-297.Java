@@ -22,7 +22,7 @@ public class TestIvan330 extends AbstractTest {
     }
 
     @Override
-    public void execute(BufferedReader reader) {
+    public void execute() {
         System.out.println("enter your number");
         Scanner scanner = new Scanner(System.in);
         int var = scanner.nextInt();

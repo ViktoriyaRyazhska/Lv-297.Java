@@ -30,7 +30,7 @@ public class TestOksana182 extends AbstractTest {
      * of the sequence and the same sequence of numbers</p>
      */
     @Override
-    public void execute(BufferedReader reader) {
+    public void execute() {
         int n = readCountOfNumbers();
         List<Integer> numbers = readNumbers(n);
 

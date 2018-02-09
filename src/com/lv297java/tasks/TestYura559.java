@@ -23,7 +23,7 @@ public class TestYura559 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute(BufferedReader reader) {
+    public void execute() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Naturally number n is given. Find all"
                 + " Mersen numbers smaller than n.");

@@ -47,7 +47,7 @@ public class VadymTask178d extends AbstractTest {
 	}
 
 	@Override
-	public void execute(BufferedReader reader) {
+	public void execute() {
 		calculation(progresionFilling());
 	}
 

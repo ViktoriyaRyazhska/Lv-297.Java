@@ -23,7 +23,7 @@ public class TestYura323 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute(BufferedReader reader) {
+    public void execute() {
         int n;
         Scanner sc = new Scanner(System.in);
         System.out.println("Naturally prime number n is given. Find all"

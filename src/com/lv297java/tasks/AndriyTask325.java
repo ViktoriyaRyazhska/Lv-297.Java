@@ -4,7 +4,8 @@ import com.lv297java.AbstractTest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+
+import static com.lv297java.tasks.inputreader.BufferReader.reader;
 
 /**
  * With this class you can print all the simple divisors of the number.
@@ -46,14 +47,14 @@ public class AndriyTask325 extends AbstractTest {
 
         String inputValue = null;
 
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+        try {
 
             System.out.println("Enter any Number to find all simple divisors");
-            inputValue = br.readLine();
+            inputValue = reader.readLine();
 
             while (!isInputCorrect(inputValue)) {
                 System.out.println("Please, enter a digit value of N\nTry again");
-                inputValue = br.readLine();
+                inputValue = reader.readLine();
             }
 
             number = Integer.parseInt(inputValue);
@@ -86,7 +87,7 @@ public class AndriyTask325 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute(BufferedReader reader) {
+    public void execute() {
         readNumber();
         printAllNumbersDivisors();
     }

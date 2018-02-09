@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * This class realize method execute from AbstractTest.
- *
+ * <p>
  * <p> It responsible for processing users input and
  * calculating result for task 243a.
  *
@@ -28,8 +28,8 @@ public class TaskOstap243a extends AbstractTest {
     }
 
     @Override
-    public void execute(BufferedReader reader) {
-        reader = new BufferedReader(new InputStreamReader(System.in));
+    public void execute() {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Given a natural number n. Can it be represented it in the form of the sum of two squares of positive integers ? If you can specify a pair of such numbers, where n = x^2 + y^2. Show one pair");
         System.out.println("Type (exit task) to end attempt");
         while (true) {
@@ -56,7 +56,6 @@ public class TaskOstap243a extends AbstractTest {
     }
 
     /**
-     *
      * @param input accepts natural number.
      * @return possible combinations of the sum of squares of a given number
      */
@@ -66,7 +65,7 @@ public class TaskOstap243a extends AbstractTest {
         for (int x = 1; x <= Math.floor(Math.sqrt(input)); x++) {
             for (int y = 1; y <= Math.floor(Math.sqrt(input)); y++) {
                 if (input == (x * x + y * y)) {
-                    list.add(new Integer[] {x, y});
+                    list.add(new Integer[]{x, y});
                 }
             }
         }
@@ -74,7 +73,6 @@ public class TaskOstap243a extends AbstractTest {
     }
 
     /**
-     *
      * @param list accepts return of {@link TaskOstap243b#findSquares(int)} format and print it into console
      */
     private void printResults(List<Integer[]> list) {

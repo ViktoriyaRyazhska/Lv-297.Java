@@ -19,7 +19,7 @@ public class VadymTask555 extends AbstractTest {
 	}
 
 	@Override
-	public void execute(BufferedReader reader) {
+	public void execute() {
 		System.out.println("Enter 'n' the number of lines in Pascal triangle:");
 		n = Integer.valueOf(scanner.nextLine());
 		System.out.println("Result:");

@@ -4,8 +4,9 @@ import com.lv297java.AbstractTest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Arrays;
+
+import static com.lv297java.tasks.inputreader.BufferReader.reader;
 
 /**
  * With this class you can calculate the sum from the last digits of the number.
@@ -67,27 +68,27 @@ public class AndriyTask87 extends AbstractTest {
      */
     private void readData() {
 
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in));) {
+        try {
 
             System.out.println("Please, enter some number");
-            inputNumber = br.readLine();
+            inputNumber = reader.readLine();
 
             while (!isInputCorrect(inputNumber)) {
                 System.out.println("Value invalid. Try again");
-                inputNumber = br.readLine();     // if input is non-digital or empty try again
+                inputNumber = reader.readLine();     // if input is non-digital or empty try again
             }
 
             System.out.println("How many digits from the end of number you want to calculate the sum\n Enter the number");
-            numberOfLastDigits = br.readLine();
+            numberOfLastDigits = reader.readLine();
 
             while (!isInputCorrect(numberOfLastDigits)) {
                 System.out.println("Please, enter a digit value\n Try again");
-                numberOfLastDigits = br.readLine();   // if input is non-digital or empty try again
+                numberOfLastDigits = reader.readLine();   // if input is non-digital or empty try again
             }
 
             while (!isValueCorrect(numberOfLastDigits)) {
                 System.out.println("Invalid value\nTry again");
-                numberOfLastDigits = br.readLine();
+                numberOfLastDigits = reader.readLine();
             }
 
         } catch (IOException e) {
@@ -111,7 +112,7 @@ public class AndriyTask87 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute(BufferedReader reader) {
+    public void execute() {
         readData();
         System.out.println(getTheSumOfLastElements());
     }

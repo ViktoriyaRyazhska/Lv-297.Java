@@ -29,7 +29,7 @@ public class TestOksana323 extends AbstractTest {
      * <p>It expects the input of one number.</p>
      */
     @Override
-    public void execute(BufferedReader reader) {
+    public void execute() {
         int n = readNumber();
         List<Integer> resultNumbers = new ArrayList<>();
 

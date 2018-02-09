@@ -72,7 +72,7 @@ public class TestOksana560 extends AbstractTest {
      * <p>Current task does not expect the input.</p>
      */
     @Override
-    public void execute(BufferedReader reader) {
+    public void execute() {
         final int leftLimit = 200;
         final int rightLimit = 300;
         System.out.println("Result: ");

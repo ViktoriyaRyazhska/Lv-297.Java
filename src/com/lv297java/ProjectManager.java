@@ -1,5 +1,8 @@
 package com.lv297java;
 
+import com.lv297java.tasks.inputreader.BufferReader;
+import com.lv297java.tasks.inputreader.Reader;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -10,27 +13,33 @@ import java.util.List;
 /**
  * Main class of this project. Contain <em>public static void main</em> method
  * and is responsible for running current console app.
- *
+ * <p>
  * <p> It should load classes from specified directory
  * and return them when user input name of exact class.
- *
+ * <p>
  * <p> It use some custom console commands, in particular:
  * <ul>
- *     <li>show tasks</li>
- *     <li>exit</li>
+ * <li>show tasks</li>
+ * <li>exit</li>
  * </ul>
  *
- * @version 1.0.7   09.02.2018
  * @author Kravtsiv Ostap
+ * @version 1.0.7   09.02.2018
  */
 
 class ProjectManager {
-    /** Here we hardcode path to folder with task classes */
+    /**
+     * Here we hardcode path to folder with task classes
+     */
     private static final String PATH_TO_TASKS = "src/com/lv297java/tasks";
-    /** This field contains instances of all loaded classes. */
+    /**
+     * This field contains instances of all loaded classes.
+     */
     private static List<AbstractTest> tasksList = new ArrayList<AbstractTest>();
 
     void start() throws IOException {
+        Reader bufferReader = new BufferReader();
+        bufferReader.createReader();
         initializeList(searchClasses(PATH_TO_TASKS));
         begin();
     }
@@ -42,7 +51,7 @@ class ProjectManager {
      */
 
     private static void begin() throws IOException {
-        try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             String taskName;
             System.out.println("Welcome to Lv-297Java first app.");
             System.out.println("To show list of tasks input (show tasks)");
@@ -61,7 +70,7 @@ class ProjectManager {
                 }
                 for (AbstractTest abstractTest : tasksList) {
                     if (abstractTest.getTestID().equals(taskName)) {
-                        abstractTest.execute(reader);
+                        abstractTest.execute();
                     }
                 }
             }
@@ -76,7 +85,6 @@ class ProjectManager {
      * paths of all classes that exists.
      *
      * @param path string argument which points to the required directory
-     *
      * @return collection of formatted relative paths to classes
      */
 
@@ -85,7 +93,7 @@ class ProjectManager {
         File file = new File(path);
         if (file.isDirectory()) {
             File[] result = file.listFiles();
-            for (File item: result) {
+            for (File item : result) {
                 String temp = item.getPath().replace('\\', '.').replace("src.", "").replace(".java", "");
                 list.add(temp);
             }
