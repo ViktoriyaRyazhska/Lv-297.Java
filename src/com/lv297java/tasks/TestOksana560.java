@@ -5,13 +5,27 @@ import com.lv297java.AbstractTest;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class implement task 560.
+ * @version 1.0
+ * @author Oksana Mekh
+ */
 public class TestOksana560 extends AbstractTest {
 
+    /**
+     * Initializes a newly created {@link TestOksana560} object.
+     * It represents a Task 560.
+     */
     public TestOksana560() {
         super("560");
     }
 
-    private static List<Integer> findDivisors(int number) {
+    /**
+     * Finds divisors of the number.
+     * @param number the number, divisors of what must to be found
+     * @return divisors of the number
+     */
+    private static List<Integer> findDivisors(final int number) {
         List<Integer> divisors = new ArrayList<>();
 
         for (int i = 1; i < number; i++) {
@@ -19,10 +33,18 @@ public class TestOksana560 extends AbstractTest {
                 divisors.add(i);
             }
         }
+        TestOksana182 t = new TestOksana182();
+        t.execute();
         return divisors;
     }
 
-    private static boolean numbersAreFriendly(int a, int b) {
+    /**
+     * Checks numbers are friendly.
+     * @param a first number
+     * @param b second number
+     * @return true if numbers are friendly and false - otherwise
+     */
+    private static boolean numbersAreFriendly(final int a, final int b) {
         int sumADivisors = 0;
         int sumBDivisors = 0;
 
@@ -40,18 +62,27 @@ public class TestOksana560 extends AbstractTest {
         return false;
     }
 
+    /**
+     * {@inheritDoc}
+     * <p>Two natural numbers are called friendly,
+     * if each of them is equal to the sum of all divisors of another,
+     * except for the same number.
+     * Find all pairs of friendly numbers lying in the range of 200 to 300.</p>
+     * <p>Current task does not expect the input.</p>
+     */
     @Override
     public void execute() {
-        for (int i = 200; i <= 300; i++) {
-            for (int j = i; j <= 300; j++) {
+        final int leftLimit = 200;
+        final int rightLimit = 300;
+        System.out.println("Result: ");
+        for (int i = leftLimit; i <= rightLimit; i++) {
+            for (int j = i; j <= rightLimit; j++) {
                 if (numbersAreFriendly(i, j)) {
                     System.out.println(i + " " + j);
                 }
             }
         }
-
-        // TODO Виведення, тести
-        System.out.println("Test executed.");
+        System.out.println("Task executed.");
     }
 
 }
