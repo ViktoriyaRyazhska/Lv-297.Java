@@ -86,7 +86,7 @@ public class AndriyTask325 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute() {
+    public void execute(BufferedReader reader) {
         readNumber();
         printAllNumbersDivisors();
     }

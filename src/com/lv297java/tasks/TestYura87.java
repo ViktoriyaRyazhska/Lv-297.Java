@@ -2,6 +2,7 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
+import java.io.BufferedReader;
 import java.util.Scanner;
 /**
  * Class that extends abstract class AbstractTest and
@@ -22,7 +23,7 @@ public class TestYura87 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute() {
+    public void execute(BufferedReader reader) {
         int n;
         int m;
         int lastDigitsSum;

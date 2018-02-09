@@ -2,6 +2,7 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -28,7 +29,7 @@ public class TestOksana323 extends AbstractTest {
      * <p>It expects the input of one number.</p>
      */
     @Override
-    public void execute() {
+    public void execute(BufferedReader reader) {
         int n = readNumber();
         List<Integer> resultNumbers = new ArrayList<>();
 

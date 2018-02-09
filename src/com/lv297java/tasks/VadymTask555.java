@@ -2,6 +2,7 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
+import java.io.BufferedReader;
 import java.util.Scanner;
 
 public class VadymTask555 extends AbstractTest {
@@ -18,7 +19,7 @@ public class VadymTask555 extends AbstractTest {
 	}
 
 	@Override
-	public void execute() {
+	public void execute(BufferedReader reader) {
 		System.out.println("Enter 'n' the number of lines in Pascal triangle:");
 		n = Integer.valueOf(scanner.nextLine());
 		System.out.println("Result:");

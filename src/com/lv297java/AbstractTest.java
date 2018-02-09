@@ -1,5 +1,7 @@
 package com.lv297java;
 
+import java.io.BufferedReader;
+
 /**
  * Base class for all tests.
  *
@@ -7,7 +9,6 @@ package com.lv297java;
  * @author Ostap Kravtsiv
  */
 public abstract class AbstractTest {
-
     /**
      * Unique ID of test.
      */
@@ -36,5 +37,5 @@ public abstract class AbstractTest {
      * It accepts data from the standard input (if necessary)
      * and outputs the result to a standard output.
      */
-    public abstract void execute();
+    public abstract void execute(BufferedReader reader);
 }

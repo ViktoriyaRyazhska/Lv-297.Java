@@ -2,6 +2,7 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -26,7 +27,7 @@ public class TaskNazariy324 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute() {
+    public void execute(BufferedReader reader) {
         Integer p = readNumberFromInput("p");
         if (p == null) {
             return;

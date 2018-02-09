@@ -2,6 +2,7 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
+import java.io.BufferedReader;
 import java.util.Scanner;
 /**
  * Class that extends abstract class AbstractTest and
@@ -22,7 +23,7 @@ public class TestYura323 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute() {
+    public void execute(BufferedReader reader) {
         int n;
         Scanner sc = new Scanner(System.in);
         System.out.println("Naturally prime number n is given. Find all"

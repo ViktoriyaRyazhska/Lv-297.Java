@@ -1,7 +1,7 @@
 package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
-
+import java.io.BufferedReader;
 import java.util.stream.IntStream;
 
 /**
@@ -45,7 +45,7 @@ public class AndriyTask562 extends AbstractTest {
      * {@inheritDoc}
      */
     @Override
-    public void execute() {
+    public void execute(BufferedReader reader) {
         printArmstrongNumbers();
     }
 

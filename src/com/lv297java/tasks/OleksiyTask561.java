@@ -15,7 +15,7 @@ public class OleksiyTask561  extends AbstractTest {
     }
 
     @Override
-    public void execute() {
+    public void execute(BufferedReader reader) {
         showNumbers();
     }
 

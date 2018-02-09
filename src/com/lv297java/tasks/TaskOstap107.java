@@ -6,22 +6,37 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * This class realize method execute from AbstractTest.
+ *
+ * <p> It responsible for processing users input and
+ * calculating result for task 107.
+ *
+ *
+ *
+ * @author Kravtsiv Ostap
+ * @version 1.0.3   09.02.2018
+ */
+
 public class TaskOstap107 extends AbstractTest {
 
+    /**
+     * Constructor without parameters used to initializing of field {@link AbstractTest#testID}
+     */
     public TaskOstap107() {
         super("107");
     }
 
     @Override
-    public void execute() {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public void execute(BufferedReader reader) {
+        reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Given an integer m > 1. Get the most out of the whole k, at which 4^k < m.");
         System.out.println("Type (exit task) to end attempt");
-        while(true) {
+        while (true) {
             System.out.println("Input m: ");
             try {
                 String input = reader.readLine();
-                if(input.equals("exit task")) {
+                if (input.equals("exit task")) {
                     break;
                 }
                 try {
@@ -39,7 +54,9 @@ public class TaskOstap107 extends AbstractTest {
         }
     }
 
+
+
     private int findMaxK(int input){
-        return (int)(0.5*(Math.log10(input)/Math.log10(2)));
+        return (int)(0.5* (Math.log10(input)/ Math.log10(2)));
     }
 }
