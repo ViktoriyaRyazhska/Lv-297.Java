@@ -8,8 +8,21 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class realize method execute from AbstractTest.
+ *
+ * <p> It responsible for processing users input and
+ * calculating result for task 243a.
+ *
+ * @author Kravtsiv Ostap
+ * @version 1.0.3   09.02.2018
+ */
+
 public class TaskOstap243a extends AbstractTest {
 
+    /**
+     * Constructor without parameters used to initializing of field {@link AbstractTest#testID}
+     */
     public TaskOstap243a() {
         super("243a");
     }
@@ -23,7 +36,7 @@ public class TaskOstap243a extends AbstractTest {
             System.out.println("Input n:");
             try {
                 String input = reader.readLine();
-                if(input.equals("exit task")) {
+                if (input.equals("exit task")) {
                     break;
                 }
                 try {
@@ -42,24 +55,32 @@ public class TaskOstap243a extends AbstractTest {
 
     }
 
+    /**
+     *
+     * @param input accepts natural number.
+     * @return possible combinations of the sum of squares of a given number
+     */
     private List<Integer[]> findSquares(int input) {
         List<Integer[]> list = new ArrayList<>();
         input = Math.abs(input);
-        for(int x = 1; x <= Math.floor(Math.sqrt(input)); x++){
-            for(int y = 1; y <= Math.floor(Math.sqrt(input)); y++) {
-                if (input == (x*x + y*y)) {
-                    list.add(new Integer[] {x,y});
+        for (int x = 1; x <= Math.floor(Math.sqrt(input)); x++) {
+            for (int y = 1; y <= Math.floor(Math.sqrt(input)); y++) {
+                if (input == (x * x + y * y)) {
+                    list.add(new Integer[] {x, y});
                 }
             }
         }
         return list;
     }
 
+    /**
+     *
+     * @param list accepts return of {@link TaskOstap243b#findSquares(int)} format and print it into console
+     */
     private void printResults(List<Integer[]> list) {
-        if(list.size() == 0) {
+        if (list.size() == 0) {
             System.out.println("There are no such pairs of numbers");
-        }
-        else {
+        } else {
             System.out.println("x = " + list.get(0)[0] + " y = " + list.get(0)[1]);
         }
     }
