@@ -2,11 +2,9 @@ package com.lv297java;
 
 import com.lv297java.inputreader.BufferReader;
 import com.lv297java.inputreader.Reader;
-
-import java.io.BufferedReader;
+import static com.lv297java.inputreader.BufferReader.reader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +27,7 @@ import java.util.List;
 
 class ProjectManager {
     /**
-     * Here we hardcode path to folder with task classes
+     * Here we hardcode path to folder with task classes.
      */
     private static final String PATH_TO_TASKS = "src/com/lv297java/tasks";
     /**
@@ -51,15 +49,19 @@ class ProjectManager {
      */
 
     private static void begin() throws IOException {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+
+        try {
             String taskName;
             System.out.println("Welcome to Lv-297Java first app.");
             System.out.println("To show list of tasks input (show tasks)");
             System.out.println("To exit this app input (exit)");
+
             while (true) {
+
                 System.out.println("Enter task name:");
                 taskName = reader.readLine();
                 if (taskName.equals("exit")) {
+                    reader.close();
                     break;
                 }
                 if (taskName.equals("show tasks")) {
@@ -75,7 +77,7 @@ class ProjectManager {
                 }
             }
         } catch (IOException e) {
-            //NOP
+            e.printStackTrace();
         }
 
     }
@@ -89,6 +91,7 @@ class ProjectManager {
      */
 
     private static List<String> searchClasses(String path) {
+
         List<String> list = new ArrayList<>();
         File file = new File(path);
         if (file.isDirectory()) {

@@ -70,15 +70,36 @@ public class AndriyTask325 extends AbstractTest {
 
         System.out.printf("This is all simple divisors of the number %s : ", number);
 
-        for (int i = 2; i <= number; i++) {
-            while (number % i == 0) {
-                System.out.print("\n" + i);
-                number = number / i;
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                System.out.printf("\n %d", i);
             }
         }
+    }
 
-        if (number < 1) {
-            System.out.println(number);
+    /**
+     * This method asks user to do operation again or break.
+     */
+    private void doMore() {
+
+        System.out.println("Do you want to do operation again? y/n");
+        String userChoice = null;
+
+        try {
+
+            userChoice = reader.readLine();
+
+            switch (userChoice) {
+                case "y":
+                    execute();
+                    break;
+                case "n":
+                    break;
+                default:
+                    doMore();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -89,6 +110,7 @@ public class AndriyTask325 extends AbstractTest {
     public void execute() {
         readNumber();
         printAllNumbersDivisors();
+        doMore();
     }
 
 }

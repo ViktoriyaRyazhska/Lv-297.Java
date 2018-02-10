@@ -107,6 +107,7 @@ public class AndriyTask87 extends AbstractTest {
         return Arrays.stream(numbersArray).mapToInt(Integer::parseInt).skip(numbersArray.length - Integer.parseInt(getNumberOfLastDigits())).sum();
     }
 
+
     /**
      * {@inheritDoc}
      */
