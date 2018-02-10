@@ -82,7 +82,7 @@ public class AndriyTask325 extends AbstractTest {
      */
     private void doMore() {
 
-        System.out.println("Do you want to do operation again? y/n");
+        System.out.println("\nDo you want to do operation again? y/n");
         String userChoice = null;
 
         try {
