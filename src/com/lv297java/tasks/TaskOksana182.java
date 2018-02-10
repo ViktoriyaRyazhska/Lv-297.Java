@@ -2,7 +2,6 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
-import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,13 +11,13 @@ import java.util.Scanner;
  * @version 1.0
  * @author Oksana Mekh
  */
-public class TestOksana182 extends AbstractTest {
+public class TaskOksana182 extends AbstractTest {
 
     /**
-     * Initializes a newly created {@link TestOksana182} object.
+     * Initializes a newly created {@link TaskOksana182} object.
      * It represents a Task 182.
      */
-    public TestOksana182() {
+    public TaskOksana182() {
         super("182");
     }
 

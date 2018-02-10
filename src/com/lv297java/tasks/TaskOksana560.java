@@ -2,7 +2,6 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
-import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,13 +10,13 @@ import java.util.List;
  * @version 1.0
  * @author Oksana Mekh
  */
-public class TestOksana560 extends AbstractTest {
+public class TaskOksana560 extends AbstractTest {
 
     /**
-     * Initializes a newly created {@link TestOksana560} object.
+     * Initializes a newly created {@link TaskOksana560} object.
      * It represents a Task 560.
      */
-    public TestOksana560() {
+    public TaskOksana560() {
         super("560");
     }
 
@@ -34,7 +33,7 @@ public class TestOksana560 extends AbstractTest {
                 divisors.add(i);
             }
         }
-        TestOksana182 t = new TestOksana182();
+        TaskOksana182 t = new TaskOksana182();
         //t.execute();
         return divisors;
     }
