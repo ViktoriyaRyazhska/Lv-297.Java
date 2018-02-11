@@ -18,6 +18,16 @@ import static com.lv297java.inputreader.BufferReader.reader;
 public class AndriyTask562 extends AbstractTask {
 
     /**
+     * The number that represents the lower limit of Armstrong numbers.
+     */
+    private static final int lowerLimit = 10;
+
+    /**
+     * The number that represents the upper limit of Armstrong numbers.
+     */
+    private static final int upperLimit = 10000;
+
+    /**
      * Initializes a newly created {@code AndriyTask562} object.
      * It represents an Task 562.
      */
@@ -29,9 +39,6 @@ public class AndriyTask562 extends AbstractTask {
      * This method print all Armstrong numbers consisting of condition.
      */
     private void printArmstrongNumbers() {
-
-        int lowerLimit = 10; // is the number that represents the lower limit of Armstrong numbers.
-        int upperLimit = 10000; // is the number that represents the upper limit of Armstrong numbers.
 
         System.out.printf("This is all Armstrong numbers in range between %s - %s\n", lowerLimit, upperLimit);
 
