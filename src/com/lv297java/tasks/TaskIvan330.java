@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 import com.lv297java.inputreader.BufferReader;
 
 import java.io.IOException;
@@ -14,7 +14,7 @@ import java.util.List;
  * @author Ivan Bernevek
  * @version 1.0 8 Feb 2018
  */
-public class TaskIvan330 extends AbstractTest {
+public class TaskIvan330 extends AbstractTask {
 
     /**
      * Entered number.

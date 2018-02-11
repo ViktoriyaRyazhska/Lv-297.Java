@@ -1,16 +1,16 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.util.Scanner;
 
 /**
- * Class that extends abstract class AbstractTest and contains solution for task number 87.
+ * Class that extends abstract class AbstractTask and contains solution for task number 87.
  *
  * @author Yura Katola
  * @version 1.0
  */
-public class TaskYura87 extends AbstractTest {
+public class TaskYura87 extends AbstractTask {
 
     /**
      * Initializes a newly created {@code TaskYura87} object.

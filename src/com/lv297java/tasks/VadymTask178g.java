@@ -1,11 +1,10 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
-import java.io.BufferedReader;
 import java.util.Scanner;
 
-public class VadymTask178g extends AbstractTest {
+public class VadymTask178g extends AbstractTask {
 	
 	private Scanner scanner = new Scanner(System.in);
 	private String n;

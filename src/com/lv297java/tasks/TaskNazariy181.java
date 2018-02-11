@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Nazariy Demyanovskyi
  * @version 1.0
  */
-public class TaskNazariy181 extends AbstractTest {
+public class TaskNazariy181 extends AbstractTask {
 
     /**
      * This count defined in task.
