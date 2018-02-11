@@ -17,15 +17,11 @@ import static com.lv297java.inputreader.BufferReader.reader;
 
 public class AndriyTask87 extends AbstractTask {
 
+
     /**
      * From the digits of this variable we calculate the sum.
      */
-    private String inputNumber;
-
-    /**
-     * This variable determines how much we want to take the digits from the end of number to get the sum from them.
-     */
-    private String numberOfLastDigits;
+    private String inputValue;
 
     /**
      * Initializes a newly created {@code AndriyTask87} object.
@@ -33,13 +29,6 @@ public class AndriyTask87 extends AbstractTask {
      */
     public AndriyTask87() {
         super("87");
-    }
-
-    /**
-     * @return the number that represents how much we want to take the digits from the end of number
-     */
-    private String getNumberOfLastDigits() {
-        return numberOfLastDigits;
     }
 
     /**
@@ -55,26 +44,46 @@ public class AndriyTask87 extends AbstractTask {
     /**
      * This method checks whether the numberOfLastDigits is no more than the length of the inputNumber.
      *
-     * @param value it's the input we wont to check
+     * @param numberOfLastDigits This variable determines how much we want to take the digits from the end of number to get the sum from them.
      * @return tru or false depending on check results
      */
-    private boolean isValueCorrect(String value) {
-        return Integer.parseInt(getNumberOfLastDigits()) <= inputNumber.length();
+    private boolean isNumberOfLastDigitsCorrect(String numberOfLastDigits) {
+        return Integer.parseInt(numberOfLastDigits) <= inputValue.length();
     }
 
     /**
-     * This method reads a inputNumber and numberOfLastDigits.
+     * This method reads the inputNumber
      */
-    private void readData() {
+    private String getInputNumber() {
+
+        String inputNumber = null;
 
         try {
-            System.out.println("Please, enter some number");
+
+            System.out.println("Please, enter any number you wont");
             inputNumber = reader.readLine();
 
             while (!isInputCorrect(inputNumber)) {
-                System.out.println("Value invalid. Try again");
+                System.out.println("It's not a number. Try again");
                 inputNumber = reader.readLine();     // if input is non-digital or empty try again
             }
+
+            inputValue = inputNumber;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return inputNumber;
+    }
+
+    /**
+     * This method reads the numberOfLastDigits
+     */
+    private String getNumberOfLastDigits() {
+
+        String numberOfLastDigits = null;
+
+        try {
 
             System.out.println("How many digits from the end of number you want to calculate the sum\n Enter the number");
             numberOfLastDigits = reader.readLine();
@@ -84,7 +93,7 @@ public class AndriyTask87 extends AbstractTask {
                 numberOfLastDigits = reader.readLine();   // if input is non-digital or empty try again
             }
 
-            while (!isValueCorrect(numberOfLastDigits)) {
+            while (!isNumberOfLastDigitsCorrect(numberOfLastDigits)) {
                 System.out.println("Invalid value\nTry again");
                 numberOfLastDigits = reader.readLine();
             }
@@ -92,28 +101,31 @@ public class AndriyTask87 extends AbstractTask {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return numberOfLastDigits;
     }
 
     /**
      * @return the sum from the last digits of the number.
      */
-    private int getTheSumOfLastElements() {
+    private int getTheSumOfLastElements(String inputNumber, String numberOfLastDigits) {
 
         // it's the array where we put each digits from inputNumber to calculate the sum.
         String[] numbersArray = inputNumber.split("");
 
         // converting all characters from String array to Integer array and calculate the sum from the digits of the last arrays cell
-        return Arrays.stream(numbersArray).mapToInt(Integer::parseInt).skip(numbersArray.length - Integer.parseInt(getNumberOfLastDigits())).sum();
+        return Arrays.stream(numbersArray).mapToInt(Integer::parseInt).skip(numbersArray.length - Integer.parseInt(numberOfLastDigits)).sum();
     }
-
 
     /**
      * {@inheritDoc}
      */
     @Override
     public void execute() {
-        readData();
-        System.out.println(getTheSumOfLastElements());
+
+        String inputNumber = getInputNumber();
+        String numberOfLastDigits = getNumberOfLastDigits();
+        int rez = getTheSumOfLastElements(inputNumber, numberOfLastDigits);
+        System.out.println(rez);
     }
 
 
