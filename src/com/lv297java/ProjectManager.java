@@ -9,12 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Main class of this project. Contain <em>public static void main</em> method
+ * Main class of this project. Contain {@link ProjectManager#start()} method
  * and is responsible for running current console app.
- * <p>
+ *
  * <p> It should load classes from specified directory
  * and return them when user input name of exact class.
- * <p>
+ *
  * <p> It use some custom console commands, in particular:
  * <ul>
  * <li>show tasks</li>
@@ -22,19 +22,21 @@ import java.util.List;
  * </ul>
  *
  * @author Kravtsiv Ostap
- * @version 1.0.7   09.02.2018
+ * @version 1.0.2   09.02.2018
  */
 
 class ProjectManager {
-    /**
-     * Here we hardcode path to folder with task classes.
-     */
+    /** Here we hardcode path to folder with task classes.*/
     private static final String PATH_TO_TASKS = "src/com/lv297java/tasks";
     /**
-     * This field contains instances of all loaded classes.
+     * This field contains instances of all loaded task classes.
      */
     private static List<AbstractTest> tasksList = new ArrayList<AbstractTest>();
-
+    /**
+     * Initialize Reader, and run service methods.
+     *
+     * @throws IOException can throw {@link IOException}
+     */
     void start() throws IOException {
         Reader bufferReader = new BufferReader();
         bufferReader.createReader();
@@ -43,7 +45,7 @@ class ProjectManager {
     }
 
     /**
-     * Run while(true) loop to maintain users input.
+     * Maintain users input.
      *
      * @throws IOException can throw IOException
      */
@@ -121,5 +123,4 @@ class ProjectManager {
             }
         }
     }
-
 }

@@ -68,7 +68,6 @@ public class AndriyTask87 extends AbstractTest {
     private void readData() {
 
         try {
-
             System.out.println("Please, enter some number");
             inputNumber = reader.readLine();
 

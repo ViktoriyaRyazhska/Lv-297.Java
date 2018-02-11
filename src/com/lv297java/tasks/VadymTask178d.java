@@ -2,7 +2,6 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
-import java.io.BufferedReader;
 import java.util.Scanner;
 
 public class VadymTask178d extends AbstractTest {
