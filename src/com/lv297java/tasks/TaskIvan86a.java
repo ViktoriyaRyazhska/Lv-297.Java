@@ -70,7 +70,7 @@ public class TaskIvan86a extends AbstractTest {
      * @param number entered natural number.
      * @return number digits in number.
      */
-    private int countDigitsCounter(int number) {
+    public int countDigitsCounter(int number) {
         final int step = 10;
         int numberDigits = 0;
         while (number > 0) {

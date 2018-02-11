@@ -43,7 +43,7 @@ public class TaskIvan86b extends AbstractTest {
             try {
                 beginnerNumber = Integer.parseInt(enteredLine);
                 if (isNatural(beginnerNumber)) {
-                    numberDigits = adderOfDigits(beginnerNumber);
+                    numberDigits = addDigitsInNumber(beginnerNumber);
                     printResult(numberDigits);
                 } else {
                     System.out.println("The number is not natural");
@@ -69,7 +69,7 @@ public class TaskIvan86b extends AbstractTest {
      * @param number entered natural number.
      * @return number digits in number.
      */
-    private int adderOfDigits(int number) {
+    public int addDigitsInNumber(int number) {
         final int step = 10;
         int sumDigits = 0;
         while (number > 0) {

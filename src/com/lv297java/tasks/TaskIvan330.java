@@ -68,7 +68,7 @@ public class TaskIvan330 extends AbstractTest {
      * @param number entered natural number.
      * @return number digits in number.
      */
-    private List findPerfectNumbers(int number) {
+    public List findPerfectNumbers(int number) {
         List<Integer> perfectNumbers = new ArrayList<>();
 
 
