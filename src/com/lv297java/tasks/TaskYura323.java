@@ -65,7 +65,7 @@ public class TaskYura323 extends AbstractTask {
      * @param b - second number, divider.
      * @return grand central dispatch value of two numbers.
      */
-    private int grandCentralDispatch(final int a, final int b) {
+    public int grandCentralDispatch(final int a, final int b) {
         int divided = a;
         int divider = b;
         while (divider != 0) {
