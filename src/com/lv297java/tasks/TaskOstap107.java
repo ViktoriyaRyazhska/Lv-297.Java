@@ -1,13 +1,13 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.io.IOException;
 
 import static com.lv297java.inputreader.BufferReader.reader;
 
 /**
- * This class realize method execute from AbstractTest.
+ * This class realize method execute from AbstractTask.
  * <p>It responsible for processing users input and
  * calculating result for task 107.
  *
@@ -15,14 +15,14 @@ import static com.lv297java.inputreader.BufferReader.reader;
  * @version 1.0.4   10.02.2018
  */
 
-public class TaskOstap107 extends AbstractTest {
-    /** Constructor without parameters used to initializing of field {@link AbstractTest#testID}.*/
+public class TaskOstap107 extends AbstractTask {
+    /** Constructor without parameters used to initializing of field {@link AbstractTask#testID}.*/
     public TaskOstap107() {
         super("107");
     }
 
     /**
-     * Realized method from {@link AbstractTest}.
+     * Realized method from {@link AbstractTask}.
      *
      * <p>Process users input and call service methods to count result.
      * Uses {@link TaskOstap107#findMaxK(int)} to count result.

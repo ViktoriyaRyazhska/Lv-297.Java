@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -15,7 +15,7 @@ import static com.lv297java.inputreader.BufferReader.reader;
  * @since 2017-06-02
  */
 
-public class AndriyTask87 extends AbstractTest {
+public class AndriyTask87 extends AbstractTask {
 
     /**
      * From the digits of this variable we calculate the sum.

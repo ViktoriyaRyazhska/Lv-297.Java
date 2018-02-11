@@ -1,17 +1,17 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.util.Scanner;
 
-public class KolyasaTask88a extends AbstractTest {
+public class KolyasaTask88a extends AbstractTask {
 
     private String m;
     private String n;
     private Scanner scanner = new Scanner(System.in);
 
     /**
-     * Initializes a newly created {@code AbstractTest} object so that it represents
+     * Initializes a newly created {@code AbstractTask} object so that it represents
      * certain math test.
      *
      * @param unique ID of test

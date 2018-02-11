@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by Администратор on 08.02.18.
  */
-public class OleksiyTask108 extends AbstractTest {
+public class OleksiyTask108 extends AbstractTask {
 
     public OleksiyTask108() {
         super("108");

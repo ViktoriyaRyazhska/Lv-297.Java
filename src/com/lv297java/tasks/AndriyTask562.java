@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 import java.util.stream.IntStream;
 
 /**
@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
  * @since 2017-06-02
  */
 
-public class AndriyTask562 extends AbstractTest {
+public class AndriyTask562 extends AbstractTask {
 
     /**
      * Initializes a newly created {@code AndriyTask562} object.

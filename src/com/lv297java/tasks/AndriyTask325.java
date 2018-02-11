@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.io.IOException;
 
@@ -14,7 +14,7 @@ import static com.lv297java.inputreader.BufferReader.reader;
  * @since 2017-06-02
  */
 
-public class AndriyTask325 extends AbstractTest {
+public class AndriyTask325 extends AbstractTask {
 
     /**
      * This is the number we want to divide.
