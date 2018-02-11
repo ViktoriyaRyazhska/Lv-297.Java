@@ -19,7 +19,7 @@ public class AndriyTask325 extends AbstractTask {
     /**
      * This is the number we want to divide.
      */
-    private int number;
+    public int inputNumber;
 
     /**
      * Initializes a newly created {@code AndriyTask325} object.
@@ -35,14 +35,14 @@ public class AndriyTask325 extends AbstractTask {
      * @param value it's the input we wont to check
      * @return tru or false depending on check results
      */
-    private boolean isInputCorrect(String value) {
+    private boolean isInputTheNumberAndNotEmpty(String value) {
         return value.chars().allMatch(Character::isDigit) && !value.equals("");
     }
 
     /**
      * This method reads the number that we want to divide.
      */
-    private void readNumber() {
+    private void readTheNumber() {
 
         String inputValue = null;
 
@@ -51,12 +51,12 @@ public class AndriyTask325 extends AbstractTask {
             System.out.println("Enter any Number to find all simple divisors");
             inputValue = reader.readLine();
 
-            while (!isInputCorrect(inputValue)) {
+            while (!isInputTheNumberAndNotEmpty(inputValue)) {
                 System.out.println("Please, enter a digit value of N\nTry again");
                 inputValue = reader.readLine();
             }
 
-            number = Integer.parseInt(inputValue);
+            inputNumber = Integer.parseInt(inputValue);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -68,10 +68,10 @@ public class AndriyTask325 extends AbstractTask {
      */
     private void printAllNumbersDivisors() {
 
-        System.out.printf("This is all simple divisors of the number %s : ", number);
+        System.out.printf("This is all simple divisors of the number %s : ", inputNumber);
 
-        for (int i = 1; i <= number; i++) {
-            if (number % i == 0) {
+        for (int i = 1; i <= inputNumber; i++) {
+            if (inputNumber % i == 0) {
                 System.out.printf("\n %d", i);
             }
         }
@@ -108,7 +108,7 @@ public class AndriyTask325 extends AbstractTask {
      */
     @Override
     public void execute() {
-        readNumber();
+        readTheNumber();
         printAllNumbersDivisors();
         doMore();
     }
