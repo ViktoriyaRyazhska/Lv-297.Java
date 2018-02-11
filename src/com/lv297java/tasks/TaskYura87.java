@@ -34,7 +34,7 @@ public class TaskYura87 extends AbstractTask {
         n = sc.nextInt();
         System.out.println("Enter the naturally number m: ");
         m = sc.nextInt();
-        lastDigitsSum = findLastDigits(n, m);
+        lastDigitsSum = findSumLastDigits(n, m);
         System.out.println("Last digits sum of number n = "
                 + lastDigitsSum);
     }
@@ -44,7 +44,7 @@ public class TaskYura87 extends AbstractTask {
      * @param m - number that represents amount of last digits we want to sum.
      * @return int value - summary m last digits of number n.
      */
-    public int findLastDigits(final int n, final int m) {
+    public int findSumLastDigits(final int n, final int m) {
         int sum = 0;
         int number = n;
         int lastDigitAmount = m;
