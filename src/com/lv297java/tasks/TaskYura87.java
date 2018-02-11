@@ -49,7 +49,7 @@ public class TaskYura87 extends AbstractTask {
         int number = n;
         int lastDigitAmount = m;
         final int divider = 10;
-        while (m > 0) {
+        while (lastDigitAmount > 0) {
             sum += number % divider;
             number = number / divider;
             lastDigitAmount--;
