@@ -2,43 +2,86 @@ package com.lv297java.tasks;
 
 import com.lv297java.AbstractTest;
 
-import java.util.Scanner;
+import java.io.IOException;
 
+import static com.lv297java.inputreader.BufferReader.reader;
+
+/**
+ * This class realize method execute from AbstractTest.
+ * <p>It responsible for processing users input and
+ * calculating result for task 88a.
+ *
+ * @author
+ * @version 1.0   11.02.2018
+ */
 public class KolyasaTask88a extends AbstractTest {
-
-    private String m;
-    private String n;
-    private Scanner scanner = new Scanner(System.in);
 
     /**
      * Initializes a newly created {@code AbstractTest} object so that it represents
      * certain math test.
-     *
-     * @param unique ID of test
      */
-    public KolyasaTask88a() {
-        super("88");
+    KolyasaTask88a() {
+        super("88a");
+    }
+
+    /**
+     * Processing users input and call service methods.
+     * @throws IOException can throw {@link IOException}
+     */
+    private void read() throws IOException {
+        try {
+            int square;
+            System.out.println("Enter the number m, the program will put it in the square m^2");
+            square = (int) Math.pow(validator(reader.readLine()), 2);
+            System.out.println("Enter the number n, the program determines whether "
+                    + "the number is included in the square of the previous number m^2:");
+            String n = reader.readLine();
+            System.out.println(doesInclude(validator(n), square)
+                    ? "Yes " + square + " contain " + n
+                    : "No " + square + " doesn`t contain " + n);
+        } catch (NumberFormatException e) {
+            System.out.println("You input not a natural number");
+            read();
+        }
+
+    }
+
+    /**
+     * Checks the entered data for validity.
+     * @param input string data for verification
+     * @return int value of input
+     * @throws NumberFormatException can throw {@link NumberFormatException}
+     */
+    private int validator(String input) throws NumberFormatException {
+        int parsedInput = Integer.valueOf(input);
+        if (parsedInput <= 0) {
+            throw new NumberFormatException();
+        }
+        return parsedInput;
     }
 
 
-    public void read() {
-        System.out.println("Enter the number m, the program will put it in the square m^2");
-        //System.out.println("Enter the number m, this program find:");
-        m = scanner.nextLine();
-        System.out.println("Enter the number n, the program determines whether the number is included in the square of the previous number m^2:");
-        n = scanner.nextLine();
+    /**
+     * The method that determines does m^2 contain n.
+     * @param input the number of matches we are looking for
+     * @param checkNumber number that may contain input
+     * @return result of the check
+     */
+    private boolean doesInclude(int input, int checkNumber) {
+        return String.valueOf(checkNumber).contains(String.valueOf(input));
     }
 
-    private boolean isNinTheM() {
-        int readNumber = Integer.parseInt(m);  // convr input String to Integer
-        int rez = readNumber*readNumber;
-        String stringFromRez = String.valueOf(rez);
-        return stringFromRez.contains(n);
-    }
-
+    /**
+     * Realized method from {@link AbstractTest}.
+     * <p>Call service method {@link KolyasaTask88a#read()}
+     * to process users input and return result.
+     */
     @Override
     public void execute() {
-        read();
-        System.out.println(isNinTheM());
+        try {
+            read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
