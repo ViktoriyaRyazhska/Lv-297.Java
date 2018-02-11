@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,10 +17,10 @@ import static com.lv297java.inputreader.BufferReader.reader;
  * @version 1.0 10.02.2018
  */
 
-abstract class AbstractTaskOstap243 extends AbstractTest {
+abstract class AbstractTaskOstap243 extends AbstractTask {
 
     /**
-     * Base constructor that set field {@link AbstractTest#testID} in parents class.
+     * Base constructor that set field {@link AbstractTask#testID} in parents class.
      * @param testID id of curent task
      */
     AbstractTaskOstap243(String testID) {

@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 import com.lv297java.inputreader.BufferReader;
 
 import java.io.IOException;
@@ -13,7 +13,7 @@ import java.io.IOException;
  * @author Ivan Bernevek
  * @version 1.0 8 Feb 2018
  */
-public class TaskIvan86a extends AbstractTest {
+public class TaskIvan86a extends AbstractTask {
 
     /**
      * Entered number.
@@ -70,7 +70,7 @@ public class TaskIvan86a extends AbstractTest {
      * @param number entered natural number.
      * @return number digits in number.
      */
-    private int countDigitsCounter(int number) {
+    public int countDigitsCounter(int number) {
         final int step = 10;
         int numberDigits = 0;
         while (number > 0) {

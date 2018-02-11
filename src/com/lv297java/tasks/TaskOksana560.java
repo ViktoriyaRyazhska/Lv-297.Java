@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
  * @version 1.0
  * @author Oksana Mekh
  */
-public class TaskOksana560 extends AbstractTest {
+public class TaskOksana560 extends AbstractTask {
 
     /**
      * Initializes a newly created {@link TaskOksana560} object.

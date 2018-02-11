@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author Nazariy Demyanovskyi
  * @version 1.0
  */
-public class TaskNazariy107 extends AbstractTest {
+public class TaskNazariy107 extends AbstractTask {
 
     /**
      * Initializes a newly created {@code TaskNazariy107} object.

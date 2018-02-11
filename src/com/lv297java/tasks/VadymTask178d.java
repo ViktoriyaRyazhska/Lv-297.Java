@@ -1,11 +1,12 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+
+import com.lv297java.AbstractTask;
 import static com.lv297java.inputreader.BufferReader.reader;
 
 import java.io.IOException;
 
-public class VadymTask178d extends AbstractTest {
+public class VadymTask178d extends AbstractTask {
 
 	public VadymTask178d() {
 		super("178d");

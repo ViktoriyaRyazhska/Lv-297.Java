@@ -1,16 +1,14 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 import static com.lv297java.inputreader.BufferReader.reader;
 
 import java.io.IOException;
 
-public class VadymTask178g extends AbstractTest {
+public class VadymTask178g extends AbstractTask {
 
 	private String inputProgresion;
-	
 	private String[] splitedInputProgresion;
-	
 	private int[] progresionIntArr;
 
 	public VadymTask178g() {
