@@ -1,7 +1,11 @@
 package com.lv297java.tasks;
 
 import com.lv297java.AbstractTask;
+
+import java.io.IOException;
 import java.util.stream.IntStream;
+
+import static com.lv297java.inputreader.BufferReader.reader;
 
 /**
  * With this class you can print all Armstrong numbers consisting of two, three and four digits if there exists.
@@ -27,9 +31,11 @@ public class AndriyTask562 extends AbstractTask {
     private void printArmstrongNumbers() {
 
         int lowerLimit = 10; // is the number that represents the lower limit of Armstrong numbers.
-        int maxLimit = 10000; // is the number that represents the upper limit of Armstrong numbers.
+        int upperLimit = 10000; // is the number that represents the upper limit of Armstrong numbers.
 
-        IntStream.range(lowerLimit, maxLimit)
+        System.out.printf("This is all Armstrong numbers in range between %s - %s\n", lowerLimit, upperLimit);
+
+        IntStream.range(lowerLimit, upperLimit)
                 .filter((n) -> {
                     final String number = Integer.toString(n);
                     return number.chars()
