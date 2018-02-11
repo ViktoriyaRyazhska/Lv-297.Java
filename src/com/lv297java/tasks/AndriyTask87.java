@@ -41,12 +41,6 @@ public class AndriyTask87 extends AbstractTask {
      * @param value it's the input we wont to check
      * @return tru or false depending on check results
      */
-    /**
-     * This method checks whether the entered number and whether input is not empty.
-     *
-     * @param value it's the input we wont to check
-     * @return tru or false depending on check results
-     */
     private boolean isInputTheNumberAndNotEmpty(String value) {
         return value.chars().allMatch(Character::isDigit) && !value.equals("");
     }
