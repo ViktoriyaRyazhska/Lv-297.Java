@@ -17,7 +17,7 @@ public class KolyasaTask88a extends AbstractTask {
      * @param unique ID of test
      */
     public KolyasaTask88a() {
-        super("88");
+        super("88a");
     }
 
 
