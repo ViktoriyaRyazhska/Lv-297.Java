@@ -7,7 +7,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by ivan on 12.02.18.
+ * Test class for VadymTask178g.class.
+ * Test methods: calculation().
+ *
+ * @version 1.0
+ * @since 2018-11-02
+ * @author Ivan
  */
 public class VadymTask178gTest {
     VadymTask178g vadymTask178g;

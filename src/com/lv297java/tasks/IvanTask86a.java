@@ -13,7 +13,7 @@ import java.io.IOException;
  * @author Ivan Bernevek
  * @version 1.0 8 Feb 2018
  */
-public class TaskIvan86a extends AbstractTask {
+public class IvanTask86a extends AbstractTask {
 
     /**
      * Entered number.
@@ -21,11 +21,11 @@ public class TaskIvan86a extends AbstractTask {
     private int beginnerNumber = 0;
 
     /**
-     * Initializes a newly created {@link TaskIvan86a} object.
+     * Initializes a newly created {@link IvanTask86a} object.
      * It represents a Task 86a.
      */
-    public TaskIvan86a() {
-        super("TaskIvan86a");
+    public IvanTask86a() {
+        super("IvanTask86a");
     }
 
 

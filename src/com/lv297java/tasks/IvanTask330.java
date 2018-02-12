@@ -4,15 +4,17 @@ import com.lv297java.AbstractTask;
 import com.lv297java.inputreader.BufferReader;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Class for task 86b.
- * determines the sum of digits in the number
+ * Class for task 330.
+ * finds the perfect numbers less than the current number
  *
  * @author Ivan Bernevek
  * @version 1.0 8 Feb 2018
  */
-public class TaskIvan86b extends AbstractTask {
+public class IvanTask330 extends AbstractTask {
 
     /**
      * Entered number.
@@ -20,31 +22,24 @@ public class TaskIvan86b extends AbstractTask {
     private int beginnerNumber = 0;
 
     /**
-     * Initializes a newly created {@link TaskIvan86b} object.
-     * It represents a Task 86b.
+     * Initializes a newly created {@link IvanTask330} object.
+     * It represents a Task 330.
      */
-    public TaskIvan86b() {
-        super("TaskIvan86b");
+    public IvanTask330() {
+        super("IvanTask330");
     }
 
-
-
-    /**
-     * {@inheritDoc}
-     *
-     * @throws IOException
-     */
     @Override
     public void execute() {
-        int numberDigits = 0;
+        List result;
         System.out.println("Enter your number");
         try {
             String enteredLine = BufferReader.reader.readLine();
             try {
                 beginnerNumber = Integer.parseInt(enteredLine);
                 if (isNatural(beginnerNumber)) {
-                    numberDigits = addDigitsInNumber(beginnerNumber);
-                    printResult(numberDigits);
+                    result = findPerfectNumbers(beginnerNumber);
+                    printResult(result);
                 } else {
                     System.out.println("The number is not natural");
                 }
@@ -55,6 +50,8 @@ public class TaskIvan86b extends AbstractTask {
             System.out.println("Input error");
         }
     }
+
+
     /**
      * Is the entered number natural?
      *
@@ -64,27 +61,43 @@ public class TaskIvan86b extends AbstractTask {
     private boolean isNatural(int number) {
         return number > 0;
     }
+
     /**
-     * Method calculate the sum of digits.
+     * Method finds the perfect numbers.
+     *
      * @param number entered natural number.
      * @return number digits in number.
      */
-    public int addDigitsInNumber(int number) {
-        final int step = 10;
-        int sumDigits = 0;
-        while (number > 0) {
-            sumDigits += number % step;
-            number /= step;
+    public List findPerfectNumbers(int number) {
+        List<Integer> perfectNumbers = new ArrayList<>();
+
+
+        for (int i = 1; i < number; i++) {
+            int sum = 0;
+            for (int j = 1; j < i; j++) {
+                if (i % j == 0) {
+                    sum = sum + j;
+                }
+            }
+            if (i == sum) {
+                perfectNumbers.add(i);
+            }
         }
-        return sumDigits;
+
+
+        return perfectNumbers;
     }
+
     /**
      * Method prints result message.
-     * @param result sum digits in number.
+     *
+     * @param result all perfect numbers less ****.
      */
-    private void printResult(int result) {
+    private void printResult(List result) {
         System.out.println("*******************************************");
-        System.out.println("the sum of digits number's " + beginnerNumber + " are " + result);
+        for (Object o : result) {
+            System.out.println("the number " + (Integer) o + " is perfect");
+        }
         System.out.println("*******************************************");
     }
 }
