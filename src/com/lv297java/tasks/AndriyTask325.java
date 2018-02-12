@@ -66,7 +66,7 @@ public class AndriyTask325 extends AbstractTask {
     }
 
     /**
-     * This method print all numbers divisors.
+     * @return the list of all simple divisors of input number
      */
     private List printAllNumbersDivisors() {
 

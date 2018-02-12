@@ -38,7 +38,7 @@ public class AndriyTask562 extends AbstractTask {
     }
 
     /**
-     * This method print all Armstrong numbers consisting of condition.
+     * @return the list of all Armstrong numbers in set range.
      */
     private List printArmstrongNumbers() {
 
