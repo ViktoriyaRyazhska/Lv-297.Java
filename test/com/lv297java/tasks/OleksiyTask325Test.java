@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import java.util.Arrays;
 import java.util.Collection;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -17,13 +19,24 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class OleksiyTask325Test {
 	
+	private OleksiyTask325 oTest;
+	private int fInput;
+	private boolean fExpected;
+	
+	@Before
+    public void setUp() throws Exception {
+		oTest = new OleksiyTask325();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    	oTest = null;
+    }
+	
 	@Parameters
 	public static Collection<Object[]> data(){
 		return Arrays.asList(new Object[][] {{3, true}, {6, false}, {10, false}, {7, true}});
 	}
-	
-	private int fInput;
-	private boolean fExpected;
 	
 	public OleksiyTask325Test(int input, boolean expected) {
 		fInput = input;
@@ -32,7 +45,7 @@ public class OleksiyTask325Test {
 	
 	@Test
 	public void isSimpleNumber() {
-		assertEquals(fExpected, OleksiyTask325.isSimpleNumber(fInput));
+		assertEquals(fExpected, oTest.isSimpleNumber(fInput));
 	}
 
 }
