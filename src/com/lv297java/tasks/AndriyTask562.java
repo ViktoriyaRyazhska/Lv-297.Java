@@ -3,6 +3,8 @@ package com.lv297java.tasks;
 import com.lv297java.AbstractTask;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.IntStream;
 
 import static com.lv297java.inputreader.BufferReader.reader;
@@ -38,9 +40,9 @@ public class AndriyTask562 extends AbstractTask {
     /**
      * This method print all Armstrong numbers consisting of condition.
      */
-    private void printArmstrongNumbers() {
+    private List printArmstrongNumbers() {
 
-        System.out.printf("This is all Armstrong numbers in range between %s - %s\n", lowerLimit, upperLimit);
+        List<Integer> listOfArmstrongNumbers = new ArrayList<>();
 
         IntStream.range(lowerLimit, upperLimit)
                 .filter((n) -> {
@@ -49,8 +51,9 @@ public class AndriyTask562 extends AbstractTask {
                             .map(d -> d - '0')
                             .mapToDouble(v -> Math.pow(v, number.length()))
                             .sum() == n;
-                }).forEach(System.out::println);
+                }).forEach(listOfArmstrongNumbers::add);
 
+        return listOfArmstrongNumbers;
     }
 
     /**
@@ -58,7 +61,9 @@ public class AndriyTask562 extends AbstractTask {
      */
     @Override
     public void execute() {
-        printArmstrongNumbers();
+
+        System.out.printf("This is all Armstrong numbers in range between %s - %s\n", lowerLimit, upperLimit);
+        System.out.println(printArmstrongNumbers());
     }
 
 
