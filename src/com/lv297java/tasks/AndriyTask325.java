@@ -3,7 +3,7 @@ package com.lv297java.tasks;
 import com.lv297java.AbstractTask;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import static com.lv297java.inputreader.BufferReader.reader;
@@ -68,9 +68,9 @@ public class AndriyTask325 extends AbstractTask {
     /**
      * @return the list of all simple divisors of input number
      */
-    private List printAllNumbersDivisors() {
+    private List getAllNumbersDivisors() {
 
-        List<Integer> numbersDevisions = new ArrayList();
+        List<Integer> numbersDevisions = new LinkedList<>();
 
         for (int i = 1; i <= inputNumber; i++) {
             if (inputNumber % i == 0) {
@@ -115,7 +115,7 @@ public class AndriyTask325 extends AbstractTask {
         readTheNumber();
 
         System.out.printf("This is all simple divisors of the number %s : ", inputNumber);
-        System.out.println(printAllNumbersDivisors());
+        System.out.println(getAllNumbersDivisors());
 
         doMore();
     }
