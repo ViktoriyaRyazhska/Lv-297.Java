@@ -19,7 +19,7 @@ public class OleksiyTask561  extends AbstractTask {
         showNumbers();
     }
 
-    public static boolean isAutomorphicNumber(int number)
+    public boolean isAutomorphicNumber(int number)
     {
         int  square = (int)Math.pow((double) number,2);
         double power = 0;
@@ -36,7 +36,7 @@ public class OleksiyTask561  extends AbstractTask {
         return false;
     }
 
-    private static void showNumbers()
+    private void showNumbers()
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         while(true) {
