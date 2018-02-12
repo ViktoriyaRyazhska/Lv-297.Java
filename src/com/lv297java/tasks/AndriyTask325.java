@@ -3,6 +3,8 @@ package com.lv297java.tasks;
 import com.lv297java.AbstractTask;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.lv297java.inputreader.BufferReader.reader;
 
@@ -66,15 +68,16 @@ public class AndriyTask325 extends AbstractTask {
     /**
      * This method print all numbers divisors.
      */
-    private void printAllNumbersDivisors() {
+    private List printAllNumbersDivisors() {
 
-        System.out.printf("This is all simple divisors of the number %s : ", inputNumber);
+        List<Integer> numbersDevisions = new ArrayList();
 
         for (int i = 1; i <= inputNumber; i++) {
             if (inputNumber % i == 0) {
-                System.out.printf("\n %d", i);
+                numbersDevisions.add(i);
             }
         }
+        return numbersDevisions;
     }
 
     /**
@@ -108,8 +111,12 @@ public class AndriyTask325 extends AbstractTask {
      */
     @Override
     public void execute() {
+
         readTheNumber();
-        printAllNumbersDivisors();
+
+        System.out.printf("This is all simple divisors of the number %s : ", inputNumber);
+        System.out.println(printAllNumbersDivisors());
+
         doMore();
     }
 
