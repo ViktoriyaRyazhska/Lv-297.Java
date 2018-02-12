@@ -7,7 +7,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Class that extends abstract class AbstractTask and contains solution for task number 323.
+ * Class that extends abstract class AbstractTask and contains solution
+ *  for task number 323.
  *
  * @author Yura Katola
  * @version 1.0
