@@ -10,12 +10,12 @@ import java.util.Scanner;
  * @author Yura Katola
  * @version 1.0
  */
-public class TaskYura87 extends AbstractTask {
+public class YuraTask87 extends AbstractTask {
 
     /**
      * Initializes a newly created {@code TaskYura87} object.
      */
-    public TaskYura87() {
+    public YuraTask87() {
         super("87(2)");
     }
 
