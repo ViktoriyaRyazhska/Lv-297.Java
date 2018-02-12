@@ -8,8 +8,8 @@ import java.lang.reflect.Method;
 
 public class KolyasaTask88aTest {
 
-    private Class<KolyasaTask88a> testClass = KolyasaTask88a.class;
-    private KolyasaTask88a testInstance = new KolyasaTask88a();
+    private Class<KolyasaTask88aVersion2> testClass = KolyasaTask88aVersion2.class;
+    private KolyasaTask88aVersion2 testInstance = new KolyasaTask88aVersion2();
 
     @Test
     public void validatorTestForPositives() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
