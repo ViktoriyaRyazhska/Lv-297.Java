@@ -68,7 +68,7 @@ public class AndriyTask325 extends AbstractTask {
     /**
      * @return the list of all simple divisors of input number
      */
-    private List getAllNumbersDivisors() {
+    public List getAllNumbersDivisors() {
 
         List<Integer> numbersDevisions = new LinkedList<>();
 

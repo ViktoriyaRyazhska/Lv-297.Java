@@ -8,8 +8,8 @@ import java.io.IOException;
 /**
  * With this class you can find amount of a.k elements in 'a.1,...,a.n that satisfy the condition like '2^k < a.k < k!'.
  *
- * @version 1.0
- * @since 2017-11-02
+ * @version 1.1
+ * @since 2018-07-02
  * @author Vadym Teslytskyy
  */
 public class VadymTask178d extends AbstractTask {

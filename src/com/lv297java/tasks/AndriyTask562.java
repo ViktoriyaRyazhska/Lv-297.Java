@@ -37,7 +37,7 @@ public class AndriyTask562 extends AbstractTask {
     /**
      * @return the list of all Armstrong numbers in set range.
      */
-    private List getArmstrongNumbers() {
+    public List getArmstrongNumbers() {
 
         List<Integer> listOfArmstrongNumbers = new LinkedList<>();
 
