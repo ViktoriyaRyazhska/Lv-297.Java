@@ -21,7 +21,7 @@ public class OleksiyTask108 extends AbstractTask {
     }
 
 
-    private static double returnNumber(int n) {
+    public static double returnNumber(int n) {
         double index = 0;
         while (true) {
             double result = Math.pow(2, index);

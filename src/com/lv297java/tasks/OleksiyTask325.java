@@ -16,7 +16,7 @@ public class OleksiyTask325 extends AbstractTask {
         super("325");
     }
 
-    private static boolean isSimpleNumber(int number)
+    public static boolean isSimpleNumber(int number)
     {
         for(int i = 2; i < number/2; ++i)
             if(number%i ==0)
@@ -42,11 +42,10 @@ public class OleksiyTask325 extends AbstractTask {
                     System.out.println("Print simple dividers:");
                      for(int i = 1; i <=number; ++i)
                      if(number%i == 0)
-            {
-                if (isSimpleNumber(i))
-                    System.out.println("simple divisor = "+i);
-            }
-
+			            {
+			                if (isSimpleNumber(i))
+			                    System.out.println("simple divisor = "+i);
+			            }
                 } catch (NumberFormatException e) {
                     System.out.println("You have entered wrong number! Try again.");
                 }

@@ -19,7 +19,7 @@ public class OleksiyTask561  extends AbstractTask {
         showNumbers();
     }
 
-    private static boolean isAutomorphicNumber(int number)
+    public static boolean isAutomorphicNumber(int number)
     {
         int  square = (int)Math.pow((double) number,2);
         double power = 0;
