@@ -7,7 +7,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by ivan on 12.02.18.
+ * Test class for VadymTask555.class.
+ * Test methods: pascalCalculation().
+ *
+ * @version 1.0
+ * @since 2018-11-02
+ * @author Ivan
  */
 public class VadymTask555Test {
     VadymTask555 vadymTask555;

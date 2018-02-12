@@ -3,7 +3,12 @@ package com.lv297java.tasks;
 import static org.junit.Assert.*;
 
 /**
- * Created by ivan on 12.02.18.
+ * Test class for VadymTask178d.class.
+ * Test methods: calculation().
+ *
+ * @version 1.0
+ * @since 2018-11-02
+ * @author Ivan
  */
 public class VadymTask178dTest {
     VadymTask178d vadymTask178d;

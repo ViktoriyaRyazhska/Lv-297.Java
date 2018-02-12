@@ -8,8 +8,8 @@ import java.io.IOException;
 /**
 * With this class you can draw Pascal`s triangle in console
 *
-* @version 1.0
-* @since 2017-11-02
+* @version 1.1
+* @since 2018-07-02
 * @author Vadym Teslytskyy
 */
 public class VadymTask555 extends AbstractTask {
