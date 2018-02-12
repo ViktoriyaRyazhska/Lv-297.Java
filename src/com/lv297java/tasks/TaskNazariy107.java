@@ -1,21 +1,17 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.util.Scanner;
 
 /**
  * This class implement task 107.
  *
+ *
  * @author Nazariy Demyanovskyi
  * @version 1.0
  */
-public class TaskNazariy107 extends AbstractTest {
-
-    /**
-     * This number defined in task.
-     */
-    public static final int FOUR = 4;
+public class TaskNazariy107 extends AbstractTask {
 
     /**
      * Initializes a newly created {@code TaskNazariy107} object.
@@ -34,11 +30,24 @@ public class TaskNazariy107 extends AbstractTest {
         if (m == null) {
             return;
         }
+        System.out.println("k = " + findLargestIntegerSatisfyCondition(m));
+    }
 
+    /**
+     * Finds the largest integer <code>k</code>, for which the right condition <code>pow(4, k) < m</code> is true.
+     *
+     * @param m an integer number greater than 1
+     * @return The largest integer that satisfies the condition <code>pow(4, k) < m</code>.
+     * @throws IllegalArgumentException when <code>m</code> not greater then 1.
+     */
+    public int findLargestIntegerSatisfyCondition(final int m) {
+        if (m <= 1) {
+            throw new IllegalArgumentException("m not greater then 1.");
+        }
+        final int four = 4;
         for (int k = 1; ; k++) {
-            if (Math.pow(FOUR, k) >= m) {
-                System.out.println("k = " + (k - 1));
-                break;
+            if (Math.pow(four, k) >= m) {
+                return k - 1;
             }
         }
     }

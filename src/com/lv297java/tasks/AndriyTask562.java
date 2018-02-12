@@ -1,25 +1,48 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
+import java.io.IOException;
 import java.util.stream.IntStream;
 
+import static com.lv297java.inputreader.BufferReader.reader;
+
 /**
- * This program return all Armstrong numbers consisting of two, three and four digits if there exists.
+ * With this class you can print all Armstrong numbers consisting of two, three and four digits if there exists.
  *
- * @version        1.0  06.02.18
- * @author         Andriy Shemechko 
+ * @author Andriy Shemechko
+ * @version 1.0
+ * @since 2017-06-02
  */
 
-public class AndriyTask562 extends AbstractTest {
+public class AndriyTask562 extends AbstractTask {
 
+    /**
+     * The number that represents the lower limit of Armstrong numbers.
+     */
+    private static final int lowerLimit = 10;
+
+    /**
+     * The number that represents the upper limit of Armstrong numbers.
+     */
+    private static final int upperLimit = 10000;
+
+    /**
+     * Initializes a newly created {@code AndriyTask562} object.
+     * It represents an Task 562.
+     */
     public AndriyTask562() {
         super("562");
     }
 
-     public static void getArmstrongNumbers() {
+    /**
+     * This method print all Armstrong numbers consisting of condition.
+     */
+    private void printArmstrongNumbers() {
 
-        IntStream.range(10, 100000)   // here we set the range
+        System.out.printf("This is all Armstrong numbers in range between %s - %s\n", lowerLimit, upperLimit);
+
+        IntStream.range(lowerLimit, upperLimit)
                 .filter((n) -> {
                     final String number = Integer.toString(n);
                     return number.chars()
@@ -30,10 +53,12 @@ public class AndriyTask562 extends AbstractTest {
 
     }
 
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void execute() {
-        getArmstrongNumbers();
+        printArmstrongNumbers();
     }
 
 

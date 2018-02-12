@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,10 +10,11 @@ import java.util.Scanner;
 
 /**
  * This class implement task 107.
- * @version 1.0
+ *
  * @author Nazariy Demyanovskyi
+ * @version 1.0
  */
-public class TaskNazariy181 extends AbstractTest {
+public class TaskNazariy181 extends AbstractTask {
 
     /**
      * This count defined in task.
@@ -21,28 +22,66 @@ public class TaskNazariy181 extends AbstractTest {
     public static final int COUNT_OF_NUMBERS = 50;
 
     /**
-     * This count defined in task.
-     */
-    public static final int DIVISOR_FOR_SUBTASK_A = 5;
-
-    /**
-     * Minimum value that be randomly created
-     * if user choose randomized initializing input.
+     * Minimum value that be randomly created if user choose randomized initializing input.
      */
     public static final int MIN_RANDOM_VALUE = -5000;
 
     /**
-     * Maximum value that be randomly created
-     * if user choose randomized initializing input.
+     * Maximum value that be randomly created if user choose randomized initializing input.
      */
     public static final int MAX_RANDOM_VALUE = 5000;
 
     /**
-     * Initializes a newly created {@code TaskNazariy181} object.
-     * It represents an Task 181.
+     * Initializes a newly created {@code TaskNazariy181} object. It represents an Task 181.
      */
     public TaskNazariy181() {
         super("181");
+    }
+
+    /**
+     * Reads 50 integer values from standart input or generate randomly them.
+     *
+     * @return integer values from standart input
+     * @see TaskNazariy181#COUNT_OF_NUMBERS
+     */
+    private static List<Integer> readDataFromInputOrGenerate() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Generate [g] or input manually [m] or exit [any other key]: ");
+        String inputType = scanner.next().trim().toLowerCase();
+        switch (inputType) {
+            case "g": {
+                List<Integer> numbers = new ArrayList<>(COUNT_OF_NUMBERS);
+                Random random = new Random();
+                for (int i = 0; i < COUNT_OF_NUMBERS; i++) {
+                    int number = random.nextInt((MAX_RANDOM_VALUE - MIN_RANDOM_VALUE)) + MIN_RANDOM_VALUE;
+                    numbers.add(number);
+                    System.out.println("Number " + i + ": " + number);
+                }
+                System.out.println();
+                return numbers;
+            }
+            case "m": {
+                List<Integer> numbers = new ArrayList<>(COUNT_OF_NUMBERS);
+                for (int i = 0; i < COUNT_OF_NUMBERS; i++) {
+                    System.out.print("Number " + (i + 1) + ": ");
+                    if (!scanner.hasNextInt()) {
+                        if (scanner.hasNext("(?i)\\s*exit\\s*")) {
+                            return numbers;
+                        } else {
+                            System.out.println("Incorrect number. Try again or input 'exit' to exit.");
+                            scanner.next();
+                            i--;
+                            continue;
+                        }
+                    }
+                    numbers.add(scanner.nextInt());
+                }
+                System.out.println();
+                return numbers;
+            }
+            default:
+                return Collections.emptyList();
+        }
     }
 
     /**
@@ -50,43 +89,50 @@ public class TaskNazariy181 extends AbstractTest {
      */
     @Override
     public void execute() {
-        List<Integer> numbers = readDataFromInput();
-        executeSubTaskA(numbers);
-        executeSubTaskB(numbers);
-        executeSubTaskC(numbers);
+        List<Integer> numbers = readDataFromInputOrGenerate();
+        System.out.println("The sum that are multiples of 5: " + findSumMultiplesOfFive(numbers));
+        System.out.println("The sum that are odd and negative: " + findSumOddAndNegative(numbers));
+        System.out.println("The sum that are satisfy the condition |a| < i^2: " + findSumSatisfyCondition(numbers));
     }
 
     /**
-     * This method executes subtask A from current test.
-     * It outputs the result to a standard output.
-     * @param numbers list of integers
+     * Finds the sum of the numbers that are multiples of 5.
+     *
+     * @param numbers list of any integer numbers. Value can not be a <code>null</code>.
+     * @return sum of the numbers that are multiples of 5.
+     * @throws NullPointerException when <code>numbers</code> is <code>null</code>.
      */
-    private static void executeSubTaskA(final List<Integer> numbers) {
-        long sum = numbers.stream()
-                .filter(n -> n % DIVISOR_FOR_SUBTASK_A == 0)
+    public long findSumMultiplesOfFive(final List<Integer> numbers) {
+        final int five = 5;
+        return numbers.stream()
+                .filter(n -> n % five == 0)
                 .mapToLong(Integer::longValue)
                 .sum();
-        System.out.println("The sum of all the numbers that are multiples of 5: " + sum);
     }
+
     /**
-     * This method executes subtask B from current test.
-     * It outputs the result to a standard output.
-     * @param numbers list of integers
+     * Finds the sum of the numbers that are odd or negative.
+     *
+     * @param numbers list of any integer numbers. Value can not be a <code>null</code>.
+     * @return sum of the numbers that are multiples of 5.
+     * @throws NullPointerException when <code>numbers</code> is <code>null</code>.
      */
-    private static void executeSubTaskB(final List<Integer> numbers) {
-        long sum = numbers.stream()
+    public long findSumOddAndNegative(final List<Integer> numbers) {
+        return numbers.stream()
                 .filter(n -> n % 2 != 0 && n < 0)
                 .mapToLong(Integer::longValue)
                 .sum();
-        System.out.println("The sum of all the numbers that are odd and negative: " + sum);
     }
 
     /**
-     * This method executes subtask C from current test.
-     * It outputs the result to a standard output.
-     * @param numbers list of integers
+     * Finds the sum of the numbers which the right condition <code>abs(n) < pow(i, 2)</code> is true, where
+     * <code>n</code> - even number in list and <code>i</code> - index of <code>n</code>.
+     *
+     * @param numbers list of any integer numbers. Value can not be a <code>null</code>.
+     * @return sum of the numbers that are multiples of 5.
+     * @throws NullPointerException when <code>numbers</code> is <code>null</code>.
      */
-    private static void executeSubTaskC(final List<Integer> numbers) {
+    public long findSumSatisfyCondition(final List<Integer> numbers) {
         long sum = 0;
         for (int i = 0; i < numbers.size(); i++) {
             int number = numbers.get(i);
@@ -94,47 +140,6 @@ public class TaskNazariy181 extends AbstractTest {
                 sum += number;
             }
         }
-        System.out.println("The sum of all the numbers that are satisfy the condition |a| < i^2: " + sum);
-    }
-
-    /**
-     * Reads {@link TaskNazariy181#COUNT_OF_NUMBERS} integer values from standart input.
-     * @return integer values from standart input
-     */
-    private static List<Integer> readDataFromInput() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Generate [g] or input manually [m] or exit [any other key]: ");
-        String inputType = scanner.next().trim().toLowerCase();
-        if (inputType.equals("g")) {
-            List<Integer> numbers = new ArrayList<>(COUNT_OF_NUMBERS);
-            Random random = new Random();
-            for (int i = 0; i < COUNT_OF_NUMBERS; i++) {
-                int number = random.nextInt((MAX_RANDOM_VALUE - MIN_RANDOM_VALUE)) + MIN_RANDOM_VALUE;
-                numbers.add(number);
-                System.out.println("Number " + i + ": " + number);
-            }
-            System.out.println();
-            return numbers;
-        } else if (inputType.equals("m")) {
-            List<Integer> numbers = new ArrayList<>(COUNT_OF_NUMBERS);
-            for (int i = 0; i < COUNT_OF_NUMBERS; i++) {
-                System.out.print("Number " + (i + 1) + ": ");
-                if (!scanner.hasNextInt()) {
-                    if (scanner.hasNext("(?i)\\s*exit\\s*")) {
-                        return numbers;
-                    } else {
-                        System.out.println("Incorrect number. Try again or input 'exit' to exit.");
-                        scanner.next();
-                        i--;
-                        continue;
-                    }
-                }
-                numbers.add(scanner.nextInt());
-            }
-            System.out.println();
-            return numbers;
-        } else {
-            return Collections.emptyList();
-        }
+        return sum;
     }
 }

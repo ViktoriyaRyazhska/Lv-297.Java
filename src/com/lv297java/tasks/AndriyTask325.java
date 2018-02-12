@@ -1,61 +1,116 @@
 package com.lv297java.tasks;
 
+import com.lv297java.AbstractTask;
+
+import java.io.IOException;
+
+import static com.lv297java.inputreader.BufferReader.reader;
+
 /**
- * This program displays all the simple divisors of the number
+ * With this class you can print all the simple divisors of the number.
  *
- * @version        1.0  06.02.18
- * @author         Andriy Shemechko 
+ * @author Andriy Shemechko
+ * @version 1.0
+ * @since 2017-06-02
  */
 
-import com.lv297java.AbstractTest;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+public class AndriyTask325 extends AbstractTask {
 
-public class AndriyTask325 extends AbstractTest {
+    /**
+     * This is the number we want to divide.
+     */
+    public int inputNumber;
 
-
+    /**
+     * Initializes a newly created {@code AndriyTask325} object.
+     * It represents an Task 325.
+     */
     public AndriyTask325() {
         super("325");
     }
 
-    private static boolean isValueNumberAndNotEmpty(String value) {
+    /**
+     * Checks whether the entered number and whether input is not empty.
+     *
+     * @param value it's the input we wont to check
+     * @return tru or false depending on check results
+     */
+    private boolean isInputTheNumberAndNotEmpty(String value) {
         return value.chars().allMatch(Character::isDigit) && !value.equals("");
     }
 
-    private static void getAllNumbersDivisors() {
+    /**
+     * This method reads the number that we want to divide.
+     */
+    private void readTheNumber() {
 
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+        String inputValue = null;
+
+        try {
 
             System.out.println("Enter any Number to find all simple divisors");
-            String inputValue = br.readLine();
+            inputValue = reader.readLine();
 
-            while (!isValueNumberAndNotEmpty(inputValue)) {
-                System.out.println("Please, enter a digit value\nTry again");
-                inputValue = br.readLine();
+            while (!isInputTheNumberAndNotEmpty(inputValue)) {
+                System.out.println("Please, enter a digit value of N\nTry again");
+                inputValue = reader.readLine();
             }
 
-            int number = Integer.parseInt(inputValue);
-            System.out.printf("This is all simple divisors of the number %s : ", number);
-
-            for (int i = 2; i <= number; i++) {
-                while (number % i == 0) {
-                    System.out.print("\n" + i);
-                    number = number / i;
-                }
-            }
-
-            if (number < 1) System.out.println(number);
+            inputNumber = Integer.parseInt(inputValue);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    
+    /**
+     * This method print all numbers divisors.
+     */
+    private void printAllNumbersDivisors() {
+
+        System.out.printf("This is all simple divisors of the number %s : ", inputNumber);
+
+        for (int i = 1; i <= inputNumber; i++) {
+            if (inputNumber % i == 0) {
+                System.out.printf("\n %d", i);
+            }
+        }
+    }
+
+    /**
+     * This method asks user to do operation again or break.
+     */
+    private void doMore() {
+
+        System.out.println("\nDo you want to do operation again? y/n");
+        String userChoice = null;
+
+        try {
+
+            userChoice = reader.readLine();
+
+            switch (userChoice) {
+                case "y":
+                    execute();
+                    break;
+                case "n":
+                    break;
+                default:
+                    doMore();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void execute() {
-        getAllNumbersDivisors();
+        readTheNumber();
+        printAllNumbersDivisors();
+        doMore();
     }
-    
+
 }
