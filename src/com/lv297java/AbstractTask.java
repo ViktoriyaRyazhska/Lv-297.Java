@@ -1,32 +1,30 @@
 package com.lv297java;
 
-import java.io.BufferedReader;
-
 /**
  * Base class for all tests.
  *
  * @version 1.0 6 Feb 2018
  * @author Ostap Kravtsiv
  */
-public abstract class AbstractTest {
+public abstract class AbstractTask {
     /**
      * Unique ID of test.
      */
     private String testID;
 
     /**
-     * Initializes a newly created {@code AbstractTest} object so that it represents
+     * Initializes a newly created {@code AbstractTask} object so that it represents
      * certain math test.
      * @param testID unique ID of test
      */
-    public AbstractTest(final String testID) {
+    public AbstractTask(final String testID) {
         this.testID = testID;
     }
 
     /**
      * Returns unique ID of current test.
      *
-     * @return current {@link AbstractTest#testID}
+     * @return current {@link AbstractTask#testID}
      */
     public String getTestID() {
         return testID;

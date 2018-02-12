@@ -1,6 +1,9 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
+
+import java.util.LinkedList;
+import java.util.List;
 import java.util.stream.IntStream;
 
 /**
@@ -11,7 +14,17 @@ import java.util.stream.IntStream;
  * @since 2017-06-02
  */
 
-public class AndriyTask562 extends AbstractTest {
+public class AndriyTask562 extends AbstractTask {
+
+    /**
+     * The number that represents the lower limit of Armstrong numbers.
+     */
+    private static final int LOWER_LIMIT = 10;
+
+    /**
+     * The number that represents the upper limit of Armstrong numbers.
+     */
+    private static final int UPPER_LIMIT = 10000;
 
     /**
      * Initializes a newly created {@code AndriyTask562} object.
@@ -22,22 +35,22 @@ public class AndriyTask562 extends AbstractTest {
     }
 
     /**
-     * This method print all Armstrong numbers consisting of condition.
+     * @return the list of all Armstrong numbers in set range.
      */
-    private void printArmstrongNumbers() {
+    public List getArmstrongNumbers() {
 
-        int lowerLimit = 10; // is the number that represents the lower limit of Armstrong numbers.
-        int maxLimit = 10000; // is the number that represents the upper limit of Armstrong numbers.
+        List<Integer> listOfArmstrongNumbers = new LinkedList<>();
 
-        IntStream.range(lowerLimit, maxLimit)
+        IntStream.range(LOWER_LIMIT, UPPER_LIMIT)
                 .filter((n) -> {
                     final String number = Integer.toString(n);
                     return number.chars()
                             .map(d -> d - '0')
                             .mapToDouble(v -> Math.pow(v, number.length()))
                             .sum() == n;
-                }).forEach(System.out::println);
+                }).forEach(listOfArmstrongNumbers::add);
 
+        return listOfArmstrongNumbers;
     }
 
     /**
@@ -45,7 +58,9 @@ public class AndriyTask562 extends AbstractTest {
      */
     @Override
     public void execute() {
-        printArmstrongNumbers();
+
+        System.out.printf("This is all Armstrong numbers in range between %s - %s\n", LOWER_LIMIT, UPPER_LIMIT);
+        System.out.println(getArmstrongNumbers());
     }
 
 

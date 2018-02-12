@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.io.*;
 
@@ -8,7 +8,7 @@ import java.io.*;
 /**
  * Created by Администратор on 08.02.18.
  */
-public class OleksiyTask561  extends AbstractTest {
+public class OleksiyTask561  extends AbstractTask {
 
     public OleksiyTask561() {
         super("561");
@@ -19,7 +19,7 @@ public class OleksiyTask561  extends AbstractTest {
         showNumbers();
     }
 
-    private static boolean isAutomorphicNumber(int number)
+    public boolean isAutomorphicNumber(int number)
     {
         int  square = (int)Math.pow((double) number,2);
         double power = 0;
@@ -36,7 +36,7 @@ public class OleksiyTask561  extends AbstractTest {
         return false;
     }
 
-    private static void showNumbers()
+    private void showNumbers()
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         while(true) {

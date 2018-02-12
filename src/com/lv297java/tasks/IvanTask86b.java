@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 import com.lv297java.inputreader.BufferReader;
 
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.io.IOException;
  * @author Ivan Bernevek
  * @version 1.0 8 Feb 2018
  */
-public class TaskIvan86b extends AbstractTest {
+public class IvanTask86b extends AbstractTask {
 
     /**
      * Entered number.
@@ -20,11 +20,11 @@ public class TaskIvan86b extends AbstractTest {
     private int beginnerNumber = 0;
 
     /**
-     * Initializes a newly created {@link TaskIvan86b} object.
+     * Initializes a newly created {@link IvanTask86b} object.
      * It represents a Task 86b.
      */
-    public TaskIvan86b() {
-        super("TaskIvan86b");
+    public IvanTask86b() {
+        super("IvanTask86b");
     }
 
 
@@ -43,7 +43,7 @@ public class TaskIvan86b extends AbstractTest {
             try {
                 beginnerNumber = Integer.parseInt(enteredLine);
                 if (isNatural(beginnerNumber)) {
-                    numberDigits = adderOfDigits(beginnerNumber);
+                    numberDigits = addDigitsInNumber(beginnerNumber);
                     printResult(numberDigits);
                 } else {
                     System.out.println("The number is not natural");
@@ -69,7 +69,7 @@ public class TaskIvan86b extends AbstractTest {
      * @param number entered natural number.
      * @return number digits in number.
      */
-    private int adderOfDigits(int number) {
+    public int addDigitsInNumber(int number) {
         final int step = 10;
         int sumDigits = 0;
         while (number > 0) {

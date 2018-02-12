@@ -31,7 +31,7 @@ class ProjectManager {
     /**
      * This field contains instances of all loaded task classes.
      */
-    private static List<AbstractTest> tasksList = new ArrayList<AbstractTest>();
+    private static List<AbstractTask> tasksList = new ArrayList<AbstractTask>();
     /**
      * Initialize Reader, and run service methods.
      *
@@ -72,9 +72,9 @@ class ProjectManager {
                         System.out.println(item);
                     }
                 }
-                for (AbstractTest abstractTest : tasksList) {
-                    if (abstractTest.getTestID().equals(taskName)) {
-                        abstractTest.execute();
+                for (AbstractTask abstractTask : tasksList) {
+                    if (abstractTask.getTestID().equals(taskName)) {
+                        abstractTask.execute();
                     }
                 }
             }
@@ -117,7 +117,7 @@ class ProjectManager {
         for (String item : list) {
             try {
                 Class<?> a = Class.forName(item);
-                tasksList.add((AbstractTest) a.getConstructor().newInstance());
+                tasksList.add((AbstractTask) a.getConstructor().newInstance());
             } catch (ReflectiveOperationException e) {
                 System.out.println("SYS-INFO: Can`t load class " + item);
             }

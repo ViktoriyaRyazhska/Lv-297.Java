@@ -1,23 +1,24 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 /**
- * Class that extends abstract class AbstractTest and contains solution for task number 323.
+ * Class that extends abstract class AbstractTask and contains solution
+ *  for task number 323.
  *
  * @author Yura Katola
  * @version 1.0
  */
-public class TaskYura323 extends AbstractTest {
+public class YuraTask323 extends AbstractTask {
 
     /**
      * Initializes a newly created {@code TaskYura323} object.
      */
-    public TaskYura323() {
+    public YuraTask323() {
         super("323(3)");
     }
 
@@ -65,7 +66,7 @@ public class TaskYura323 extends AbstractTest {
      * @param b - second number, divider.
      * @return grand central dispatch value of two numbers.
      */
-    private int grandCentralDispatch(final int a, final int b) {
+    public int grandCentralDispatch(final int a, final int b) {
         int divided = a;
         int divider = b;
         while (divider != 0) {

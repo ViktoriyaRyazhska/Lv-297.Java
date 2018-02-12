@@ -1,6 +1,6 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -10,13 +10,13 @@ import java.io.IOException;
  * Created by Администратор on 08.02.18.
  */
 
-public class OleksiyTask325 extends AbstractTest {
+public class OleksiyTask325 extends AbstractTask {
 
     public OleksiyTask325() {
         super("325");
     }
 
-    private static boolean isSimpleNumber(int number)
+    public boolean isSimpleNumber(int number)
     {
         for(int i = 2; i < number/2; ++i)
             if(number%i ==0)
@@ -24,7 +24,7 @@ public class OleksiyTask325 extends AbstractTest {
         return true;
     }
 
-    private static void showNumbers()
+    private void showNumbers()
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         while(true) {
@@ -42,11 +42,10 @@ public class OleksiyTask325 extends AbstractTest {
                     System.out.println("Print simple dividers:");
                      for(int i = 1; i <=number; ++i)
                      if(number%i == 0)
-            {
-                if (isSimpleNumber(i))
-                    System.out.println("simple divisor = "+i);
-            }
-
+			            {
+			                if (isSimpleNumber(i))
+			                    System.out.println("simple divisor = "+i);
+			            }
                 } catch (NumberFormatException e) {
                     System.out.println("You have entered wrong number! Try again.");
                 }

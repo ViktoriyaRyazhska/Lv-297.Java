@@ -1,11 +1,11 @@
 package com.lv297java.tasks;
 
-import com.lv297java.AbstractTest;
+import com.lv297java.AbstractTask;
 
 import static com.lv297java.tasks.AbstractTaskOstap243.Point.A;
 
 /**
- * This class realize method {@link AbstractTest#execute()}.
+ * This class realize method {@link AbstractTask#execute()}.
  *
  * <p>This class can count sum of squares of natural number n (if it exists).
  *
@@ -19,13 +19,13 @@ import static com.lv297java.tasks.AbstractTaskOstap243.Point.A;
 
 public class TaskOstap243a extends AbstractTaskOstap243 {
 
-    /** Constructor without parameters used to initializing of field {@link AbstractTest#testID}.*/
+    /** Constructor without parameters used to initializing of field {@link AbstractTask#testID}.*/
     public TaskOstap243a() {
         super("243a");
     }
 
     /**
-     * Realized method from {@link AbstractTest}.
+     * Realized method from {@link AbstractTask}.
      *
      * <p>Call service method {@link AbstractTaskOstap243#service(String, Point)}
      * to process users input and return result.
