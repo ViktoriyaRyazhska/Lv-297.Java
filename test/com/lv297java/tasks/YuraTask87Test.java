@@ -3,7 +3,7 @@ package com.lv297java.tasks;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TaskYura87Test {
+public class YuraTask87Test {
 
     private final YuraTask87 task = new YuraTask87();
 

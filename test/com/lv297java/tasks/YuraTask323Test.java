@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class TaskYura323Test {
+public class YuraTask323Test {
 
     private final YuraTask323 task = new YuraTask323();
 
