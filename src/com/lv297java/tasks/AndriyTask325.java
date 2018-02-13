@@ -37,7 +37,11 @@ public class AndriyTask325 extends AbstractTask {
      * @param value it's the input we wont to check
      * @return tru or false depending on check results
      */
-    private boolean isInputTheNumberAndNotEmpty(String value) {
+    private boolean isInputTheNumberMoreThanNullAndNotEmpty(String value) {
+        if (value.equals("0")) {
+            System.out.println("Please, enter number > 0");
+            return false;
+        }
         return value.chars().allMatch(Character::isDigit) && !value.equals("");
     }
 
@@ -53,7 +57,7 @@ public class AndriyTask325 extends AbstractTask {
             System.out.println("Enter any Number to find all simple divisors");
             inputValue = reader.readLine();
 
-            while (!isInputTheNumberAndNotEmpty(inputValue)) {
+            while (!isInputTheNumberMoreThanNullAndNotEmpty(inputValue)) {
                 System.out.println("Please, enter a digit value of N\nTry again");
                 inputValue = reader.readLine();
             }

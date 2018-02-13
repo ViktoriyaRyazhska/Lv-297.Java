@@ -41,12 +41,16 @@ public class AndriyTask87 extends AbstractTask {
      * @param value it's the input we wont to check
      * @return tru or false depending on check results
      */
-    private boolean isInputTheNumberAndNotEmpty(String value) {
+    private boolean isInputTheNumberMoreThanNullAndNotEmpty(String value) {
+        if (value.equals("0")) {
+            System.out.println("Please, enter number > 0");
+            return false;
+        }
         return value.chars().allMatch(Character::isDigit) && !value.equals("");
     }
 
     /**
-     * This method checks whether the numberOfLastDigits is no more than the length of the inputNumber.
+     * This method checks whether the number of Last digits is no more than the length of the input number.
      *
      * @return tru or false depending on check results
      */
@@ -63,7 +67,7 @@ public class AndriyTask87 extends AbstractTask {
             System.out.println("Please, enter some number");
             inputNumber = reader.readLine();
 
-            while (!isInputTheNumberAndNotEmpty(inputNumber)) {
+            while (!isInputTheNumberMoreThanNullAndNotEmpty(inputNumber)) {
                 System.out.println("Value invalid. Try again");
                 inputNumber = reader.readLine();     // if input is non-digital or empty try again
             }
@@ -71,7 +75,7 @@ public class AndriyTask87 extends AbstractTask {
             System.out.println("How many digits from the end of number you want to calculate the sum\n Enter the number");
             numberOfLastDigits = reader.readLine();
 
-            while (!isInputTheNumberAndNotEmpty(numberOfLastDigits)) {
+            while (!isInputTheNumberMoreThanNullAndNotEmpty(numberOfLastDigits)) {
                 System.out.println("Please, enter a digit value\n Try again");
                 numberOfLastDigits = reader.readLine();   // if input is non-digital or empty try again
             }
