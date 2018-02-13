@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Nazariy Demyanovskyi
  * @version 1.0
  */
-public class TaskNazariy181 extends AbstractTask {
+public class NazariyTask181 extends AbstractTask {
 
     /**
      * This count defined in task.
@@ -32,9 +32,9 @@ public class TaskNazariy181 extends AbstractTask {
     public static final int MAX_RANDOM_VALUE = 5000;
 
     /**
-     * Initializes a newly created {@code TaskNazariy181} object. It represents an Task 181.
+     * Initializes a newly created {@code NazariyTask181} object. It represents an Task 181.
      */
-    public TaskNazariy181() {
+    public NazariyTask181() {
         super("181");
     }
 
@@ -42,7 +42,7 @@ public class TaskNazariy181 extends AbstractTask {
      * Reads 50 integer values from standart input or generate randomly them.
      *
      * @return integer values from standart input
-     * @see TaskNazariy181#COUNT_OF_NUMBERS
+     * @see NazariyTask181#COUNT_OF_NUMBERS
      */
     private static List<Integer> readDataFromInputOrGenerate() {
         Scanner scanner = new Scanner(System.in);
