@@ -7,8 +7,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class KolyasaTask322Test {
-    private Class<KolyasaTask322> testClass = KolyasaTask322.class;
-    private KolyasaTask322 testInstance = new KolyasaTask322();
+    private Class<KolyasaTask322Version2> testClass = KolyasaTask322Version2.class;
+    private KolyasaTask322Version2 testInstance = new KolyasaTask322Version2();
 
     @Test
     public void validatorTestForPositives() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {

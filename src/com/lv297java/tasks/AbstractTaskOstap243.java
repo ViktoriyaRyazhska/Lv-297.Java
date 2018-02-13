@@ -150,5 +150,4 @@ abstract class AbstractTaskOstap243 extends AbstractTask {
         /** Constant that represents task 243b.*/
         B
     }
-
 }
