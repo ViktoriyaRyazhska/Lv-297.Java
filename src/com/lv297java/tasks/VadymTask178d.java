@@ -49,60 +49,60 @@ public class VadymTask178d extends AbstractTask {
     /**
      * This method covert String[] splitedInputProgresion to int[] progresionIntArr.
      */
-	private void progresionConverting() {
-		splitedInputProgresion = inputProgresion.split("\\s+");
-		progresionIntArr = new int[splitedInputProgresion.length];
-		for (int i = 0; i < splitedInputProgresion.length; i++) {
-			progresionIntArr[i] = Integer.valueOf(splitedInputProgresion[i]);
-		}
-	}
-	/**
+    private void progresionConverting() {
+        splitedInputProgresion = inputProgresion.split("\\s+");
+        progresionIntArr = new int[splitedInputProgresion.length];
+        for (int i = 0; i < splitedInputProgresion.length; i++) {
+            progresionIntArr[i] = Integer.valueOf(splitedInputProgresion[i]);
+        }
+    }
+    /**
      * This method calculate amount of number in progresionIntArr that satisfy the condition like '2^k < a.k < k!'.
      * @param arrOfProg it`s int array of progresion in which we search numbers.
      * @return counter = amount of numbers that satisfy the condition like '2^k < a.k < k!'.
      */
-	public int calculation(int[] arrOfProg) {
-		int counter = 0;
-		int factorialOfCurrentStepCounter;
-		double twoInStepOfCurrentStepCounter;
-		for (int i = 0; i < arrOfProg.length; i++) {
-			factorialOfCurrentStepCounter = factorialCalculation(i);
-			twoInStepOfCurrentStepCounter = Math.pow(2, i);
-			if ((arrOfProg[i] < factorialOfCurrentStepCounter)
-					&& (arrOfProg[i] > twoInStepOfCurrentStepCounter)) {
-				counter++;
-			}
-		}
-		return counter;
-	}
-	/**
+    public int calculation(int[] arrOfProg) {
+        int counter = 0;
+        int factorialOfCurrentStepCounter;
+        double twoInStepOfCurrentStepCounter;
+        for (int i = 0; i < arrOfProg.length; i++) {
+            factorialOfCurrentStepCounter = factorialCalculation(i);
+            twoInStepOfCurrentStepCounter = Math.pow(2, i);
+            if ((arrOfProg[i] < factorialOfCurrentStepCounter)
+                    && (arrOfProg[i] > twoInStepOfCurrentStepCounter)) {
+                counter++;
+                }
+            }
+        return counter;
+     }
+    /**
      * This method calculate factorial of number.
      * @param baseNumber the number from which we calculate the factorial.
      * @return result = result of factorial.
      */
-	public final int factorialCalculation(int baseNumber) {
-		int result = 1;
-		for (int i = 1; i <= baseNumber; i++) {
-			result *= i;
-		}
-		return result;
-	}
-	/**
+    public final int factorialCalculation(int baseNumber) {
+        int result = 1;
+        for (int i = 1; i <= baseNumber; i++) {
+             result *= i;
+        }
+        return result;
+    }
+    /**
      * This method print result of calculating.
      * @param counter amount of numbers that satisfy the condition like '2^k < a.k < k!'.
      */
-	private void printResult(int counter) {
-		System.out.println(
-				"Amount of elements that satisfy the condition like '2^k < a.k < k!' is -> " + counter);
-	}
-	/**
+    private void printResult(int counter) {
+        System.out.println(
+                 "Amount of elements that satisfy the condition like '2^k < a.k < k!' is -> " + counter);
+    }
+    /**
      * {@inheritDoc}
      */
-	@Override
-	public final void execute() {
-		progresionReading();
-		progresionConverting();
-		printResult(calculation(progresionIntArr));
-	}
+    @Override
+    public final void execute() {
+        progresionReading();
+        progresionConverting();
+        printResult(calculation(progresionIntArr));
+    }
 
 }
