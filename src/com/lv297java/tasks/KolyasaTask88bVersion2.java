@@ -19,7 +19,7 @@ public class KolyasaTask88bVersion2 extends AbstractTask {
      * Initializes a newly created {@code AbstractTest} object so that it represents
      * certain math test.
      */
-    KolyasaTask88bVersion2() {
+    public KolyasaTask88bVersion2() {
         super("88b");
     }
 

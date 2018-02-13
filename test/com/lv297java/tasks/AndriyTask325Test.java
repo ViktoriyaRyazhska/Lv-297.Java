@@ -9,7 +9,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
 /**
 * Test class for AndriyTask325.class.
 * Test methods: getAllNumbersDivisors().
