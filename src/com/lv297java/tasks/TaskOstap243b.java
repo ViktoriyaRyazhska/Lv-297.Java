@@ -32,7 +32,10 @@ public class TaskOstap243b extends AbstractTaskOstap243 {
      */
     @Override
     public void execute() {
-        service("Given a natural number n. Can it be represented in the form of the sum of two squares of positive integers. If you can specify a pair of such numbers, where n = x^2 + y^2. Show all possible pairs where x>=y", B);
+        service("Given a natural number n. "
+                + "Can it be represented in the form of the sum of two squares of positive integers. "
+                + "If you can specify a pair of such numbers, "
+                + "where n = x^2 + y^2. Show all possible pairs where x>=y", B);
     }
 
 

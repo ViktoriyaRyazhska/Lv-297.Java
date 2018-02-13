@@ -16,7 +16,7 @@ public class OleksiyTask325 extends AbstractTask {
         super("325");
     }
 
-    public static boolean isSimpleNumber(int number)
+    public boolean isSimpleNumber(int number)
     {
         for(int i = 2; i < number/2; ++i)
             if(number%i ==0)
@@ -24,7 +24,7 @@ public class OleksiyTask325 extends AbstractTask {
         return true;
     }
 
-    private static void showNumbers()
+    private void showNumbers()
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         while(true) {

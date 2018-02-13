@@ -45,7 +45,7 @@ abstract class AbstractTaskOstap243 extends AbstractTask {
                 try {
                     List<Entry> list = resultList(findSquares(validation(input)), point);
                     if (list.size() == 0) {
-                        System.out.println("");
+                        System.out.println("Can`t represent a given number as the sum of the squares of the other two");
                     } else {
                         for (Entry entry: list) {
                             System.out.println(entry.toString());
@@ -150,5 +150,4 @@ abstract class AbstractTaskOstap243 extends AbstractTask {
         /** Constant that represents task 243b.*/
         B
     }
-
 }

@@ -21,7 +21,7 @@ public class OleksiyTask108 extends AbstractTask {
     }
 
 
-    public static double returnNumber(int n) {
+    public double returnNumber(int n) {
         double index = 0;
         while (true) {
             double result = Math.pow(2, index);
@@ -32,7 +32,7 @@ public class OleksiyTask108 extends AbstractTask {
 
     }
 
-    private static void printNumber() {
+    private void printNumber() {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         while (true) {
             try {
