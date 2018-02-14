@@ -12,13 +12,13 @@ import java.util.Scanner;
  * @author Nazariy Demyanovskyi
  * @version 1.0
  */
-public class TaskNazariy324 extends AbstractTask {
+public class NazariyTask324 extends AbstractTask {
 
     /**
-     * Initializes a newly created {@code TaskNazariy324} object.
+     * Initializes a newly created {@code NazariyTask324} object.
      * It represents an Task 324.
      */
-    public TaskNazariy324() {
+    public NazariyTask324() {
         super("324");
     }
 

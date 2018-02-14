@@ -54,20 +54,20 @@ public class Oksana323TaskTest {
         });
     }
 
-    @org.junit.Test
+    @Test
     public void findAllResultNumbersTest() {
         List<Integer> actual = oksanaTask323.findAllResultNumbers(input);
         assertEquals(expected, actual);
     }
 
 
-    @org.junit.Test
+    @Test
     public void greatestCommonDivisorTest() {
         int expected = 4;
         assertEquals(expected, oksanaTask323.greatestCommonDivisor(12, 8));
     }
 
-    @org.junit.Test
+    @Test
     public void readNumberTest() {
         String input = "3";
         int expected = 3;

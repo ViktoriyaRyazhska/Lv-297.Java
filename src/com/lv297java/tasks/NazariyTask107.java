@@ -7,17 +7,15 @@ import java.util.Scanner;
 /**
  * This class implement task 107.
  *
- *
  * @author Nazariy Demyanovskyi
  * @version 1.0
  */
-public class TaskNazariy107 extends AbstractTask {
+public class NazariyTask107 extends AbstractTask {
 
     /**
-     * Initializes a newly created {@code TaskNazariy107} object.
-     * It represents an Task 107.
+     * Initializes a newly created {@code NazariyTask107} object. It represents an Task 107.
      */
-    public TaskNazariy107() {
+    public NazariyTask107() {
         super("N-107");
     }
 
