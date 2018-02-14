@@ -13,6 +13,10 @@ import java.io.IOException;
  * @author Vadym Teslytskyy
  */
 public class VadymTask555 extends AbstractTask {
+	/**
+     * Const of task nuber for constructor.
+     */
+	private static final String TASK_NUMBER = "555";
     /**
      * Amount of Pascal triangle lines that will be printed
      */
@@ -22,7 +26,7 @@ public class VadymTask555 extends AbstractTask {
      * It represents a Task 555.
      */
     public VadymTask555() {
-        super("555");
+        super(TASK_NUMBER);
     }
     /**
      * This method calculate number of Pascal triangle by the formula:

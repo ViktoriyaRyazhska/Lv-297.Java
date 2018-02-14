@@ -14,6 +14,10 @@ import java.io.IOException;
  */
 public class VadymTask178d extends AbstractTask {
     /**
+     * Const of task nuber for constructor.
+     */
+    private static final String TASK_NUMBER = "178d";
+    /**
      * Entered progresion.
      */
     private String inputProgresion;
@@ -31,7 +35,7 @@ public class VadymTask178d extends AbstractTask {
     * It represents a Task 178d.
     */
     public VadymTask178d() {
-        super("178d");
+        super(TASK_NUMBER);
     }
     /**
      * This method reads a inputProgresion.
